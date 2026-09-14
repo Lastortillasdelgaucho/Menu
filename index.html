@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Las Tortillas del Gaucho</title>
+<style>
+:root{--gold:#f4b72f;--cream:#f1dfb8;--ink:#060606;--ivory:#fff6df;--border:#76572c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#050505;color:var(--ivory);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+a{text-decoration:none;color:inherit} img{display:block;max-width:100%}
+
+.header{background:#050505;border-bottom:1px solid rgba(244,183,47,.18);position:sticky;top:0;z-index:1000}
+.header-inner{max-width:1180px;min-height:82px;margin:auto;padding:8px 26px;display:flex;align-items:center;gap:28px}
+.logo{width:155px;flex:0 0 auto}.logo img{width:100%;height:100px;object-fit:contain}
+nav{flex:1;display:flex;justify-content:center;align-items:center;gap:34px}
+nav a{font-size:12px;font-weight:900;text-transform:uppercase;white-space:nowrap}
+nav a:hover,nav a:first-child{color:var(--gold)}
+.social{display:flex;gap:14px;font-size:20px;font-weight:900}
+
+.hero{background:#090806;overflow:hidden}
+.hero-inner{max-width:1180px;min-height:500px;margin:auto;display:grid;grid-template-columns:39% 61%}
+.hero-copy{padding:52px 12px 48px 28px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;z-index:2}
+.script{font-family:Georgia,serif;font-style:italic;color:#fff5dd;text-shadow:0 2px 3px #000}
+.hero-kicker{font-size:35px;transform:rotate(-2deg);line-height:.95}
+.hero-title{font-size:82px;line-height:.82;font-weight:950;color:var(--gold);letter-spacing:-4px;text-transform:uppercase}
+.hero-sub{margin:8px 0 20px;font-size:38px;transform:rotate(-3deg);line-height:.95}
+.paint-label{display:inline-block;background:var(--gold);color:#070707;font-size:16px;font-weight:950;padding:9px 25px;margin-bottom:20px;transform:rotate(-2deg) skew(-6deg)}
+.paint-label span{display:block;transform:skew(6deg)}
+.order-btn{display:inline-flex;align-items:center;gap:12px;border-radius:999px;background:var(--gold);color:#080808;padding:14px 25px;font-weight:950;font-size:17px;box-shadow:0 5px 0 rgba(0,0,0,.35);transition:.2s}
+.order-btn:hover{transform:translateY(-2px) scale(1.015);background:#ffc747}
+.hero-visual{min-height:500px;position:relative;background:linear-gradient(90deg,#090806 0%,rgba(9,8,6,.55) 7%,rgba(9,8,6,0) 28%),url("hero_nuevo.jpg") center/cover no-repeat}
+.hero-note{position:absolute;right:30px;bottom:62px;font-size:24px;line-height:1.05;text-align:center;transform:rotate(-7deg);width:165px}
+
+.rip{height:25px;margin-top:-14px;position:relative;z-index:4;background:#0a0a09;clip-path:polygon(0 38%,4% 64%,8% 42%,12% 70%,16% 43%,20% 62%,24% 40%,28% 66%,32% 44%,36% 68%,40% 42%,44% 61%,48% 39%,52% 65%,56% 42%,60% 61%,64% 38%,68% 67%,72% 43%,76% 62%,80% 40%,84% 68%,88% 45%,92% 63%,96% 40%,100% 64%,100% 100%,0 100%)}
+
+.sabores{background:radial-gradient(circle at 50% 0,rgba(95,63,19,.12),transparent 34%),#090909;padding:28px 24px 34px}
+.sabores-head{text-align:center;margin-bottom:18px}
+.sabores-head h2{font-size:41px;line-height:1;font-weight:950;text-transform:uppercase;letter-spacing:-1px}
+.sabores-head h2:before,.sabores-head h2:after{content:"✦";color:var(--gold);margin:0 13px;font-size:28px;vertical-align:middle}
+.sabores-head p{margin-top:8px;color:#ddd0b2;font-size:11px;text-transform:uppercase;letter-spacing:4px}
+.rule{height:1px;width:520px;max-width:74vw;margin:10px auto 0;background:linear-gradient(90deg,transparent,#b4873e,transparent)}
+
+.flavor-grid{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.flavor-card{overflow:hidden;border:1px solid var(--border);border-radius:7px;background:#12100c;box-shadow:0 8px 22px rgba(0,0,0,.3)}
+.flavor-card img{width:100%;height:158px;object-fit:cover}
+.flavor-info{min-height:76px;padding:8px 6px 10px;display:flex;flex-direction:column;justify-content:center;align-items:center;background:linear-gradient(#17140f,#0a0907);text-align:center}
+.flavor-info h3{color:#fff7e9;font-size:22px;line-height:1;font-weight:950;text-transform:uppercase}
+.flavor-info p{margin-top:4px;color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:14px}
+.flavor-phrase{display:flex;align-items:center;justify-content:center;text-align:center;color:#fff1d2;font-family:Georgia,serif;font-style:italic;font-size:31px;line-height:1.02;transform:rotate(-5deg);padding:20px}
+
+.info{background:var(--cream);color:#101010;padding:30px 24px}
+.info-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.info-item{display:grid;grid-template-columns:48px 1fr;gap:10px;align-items:center}
+.info-icon{font-size:36px;text-align:center;filter:grayscale(1)}
+.info-item h4{font-size:14px;font-weight:950;text-transform:uppercase;margin-bottom:3px}
+.info-item p{font-size:12px;line-height:1.25}
+
+.footer-visual{position:relative;width:100%;background:#050505;overflow:hidden}
+.footer-visual img{width:100%;height:auto}
+.footer-hotspot{position:absolute;left:71.4%;top:40%;width:24%;height:22%;border-radius:999px;z-index:3;cursor:pointer}
+.footer-hotspot:focus-visible{outline:3px solid #fff;outline-offset:4px}
+
+.bottom{background:#050505;border-top:1px solid rgba(255,255,255,.09);color:#a8a8a8;font-size:11px;padding:14px 22px}
+.bottom-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:20px}
+
+.whatsapp-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#25d366;color:#fff;font-size:28px;font-weight:950;z-index:1200;box-shadow:0 8px 22px rgba(0,0,0,.45)}
+
+@media(max-width:900px){
+  .header-inner{gap:15px;padding:7px 15px}.logo{width:120px}.logo img{height:80px}
+  nav{gap:16px}nav a{font-size:10px}.social{display:none}
+  .hero-inner{grid-template-columns:44% 56%}.hero-title{font-size:61px}.hero-kicker{font-size:25px}.hero-sub{font-size:29px}
+  .flavor-grid{grid-template-columns:repeat(3,1fr)}.flavor-phrase{display:none}
+  .info-inner{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:650px){
+  .header{position:relative}.header-inner{flex-direction:column;min-height:auto;padding:8px 10px 10px;gap:5px}
+  .logo{width:105px}.logo img{height:68px}
+  nav{width:100%;justify-content:flex-start;overflow-x:auto;gap:18px;padding:4px 3px;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}nav a{font-size:9px;flex:0 0 auto}
+  .hero-inner{grid-template-columns:1fr}
+  .hero-copy{min-height:450px;padding:40px 20px 32px;align-items:center;text-align:center;background:linear-gradient(rgba(6,6,5,.55),rgba(6,6,5,.88)),url("hero_nuevo.jpg") center/cover no-repeat}
+  .hero-visual{display:none}.hero-kicker{font-size:28px}.hero-title{font-size:63px}.hero-sub{font-size:30px}.paint-label{font-size:14px}.order-btn{font-size:15px;padding:13px 22px}
+  .sabores{padding:25px 11px 30px}.sabores-head h2{font-size:28px}.sabores-head h2:before,.sabores-head h2:after{font-size:18px;margin:0 5px}
+  .sabores-head p{font-size:8px;letter-spacing:2.4px}
+  .flavor-grid{grid-template-columns:repeat(2,1fr);gap:9px}.flavor-card img{height:115px}.flavor-info{min-height:63px;padding:7px 4px}
+  .flavor-info h3{font-size:16px}.flavor-info p{font-size:11px}.flavor-phrase{display:flex;min-height:178px;font-size:22px}
+  .info{padding:24px 14px}.info-inner{grid-template-columns:1fr;gap:18px}.info-item{grid-template-columns:44px 1fr}
+  .footer-visual{min-height:230px;background:url("footer_nuevo.jpg") center/cover no-repeat}.footer-visual img{display:none}
+  .footer-hotspot{left:57%;top:57%;width:37%;height:19%}
+  .bottom-inner{flex-direction:column;text-align:center;align-items:center}
+}
+@media(max-width:380px){.hero-title{font-size:52px}.sabores-head h2{font-size:24px}.flavor-info h3{font-size:14px}}
+</style>
+</head>
+
+<body>
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="#inicio"><img src="logo_nuevo.jpg" alt="Las Tortillas del Gaucho"></a>
+    <nav aria-label="Menú principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#sabores">Nuestros Sabores</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="social"><span>◎</span><span>♪</span></div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="hero-kicker script">Llevamos la clásica</div>
+        <h1 class="hero-title">TORTILLA</h1>
+        <div class="hero-sub script">a otro nivel</div>
+        <div class="paint-label"><span>SABORES QUE ENAMORAN</span></div>
+        <a class="order-btn" href="https://wa.me/5491157979932?text=Hola%2C%20quiero%20hacer%20un%20pedido%20de%20tortillas" target="_blank" rel="noopener noreferrer">☎ &nbsp; HACÉ TU PEDIDO &nbsp; ›</a>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-note script">Más que<br>tortilla,<br>una tradición</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rip"></div>
+
+  <section class="sabores" id="sabores">
+    <div class="sabores-head">
+      <h2>Nuestros Sabores</h2>
+      <p>Tortillas caseras, bien argentinas</p>
+      <div class="rule"></div>
+    </div>
+
+    <div class="flavor-grid">
+      <article class="flavor-card"><img src="roquefort_hd.jpg" alt="Tortilla de roquefort y muzza"><div class="flavor-info"><h3>Roquefort</h3><p>y muzza</p></div></article>
+      <article class="flavor-card"><img src="provoleta_hd.jpg" alt="Tortilla de provoleta con jamón y queso"><div class="flavor-info"><h3>Provoleta</h3><p>con jamón y queso</p></div></article>
+      <article class="flavor-card"><img src="caprese_hd.jpg" alt="Tortilla caprese"><div class="flavor-info"><h3>Caprese 🌿</h3></div></article>
+      <article class="flavor-card"><img src="fugazzeta_hd.jpg" alt="Tortilla fugazzeta"><div class="flavor-info"><h3>Fugazzeta 🧅</h3></div></article>
+      <article class="flavor-card"><img src="jamon_hd.jpg" alt="Tortilla de jamón y queso"><div class="flavor-info"><h3>Jamón</h3><p>y queso</p></div></article>
+      <article class="flavor-card"><img src="jamon_muzza_morron_hd.jpg" alt="Tortilla de jamón, muzza y morrón"><div class="flavor-info"><h3>Jamón, Muzza</h3><p>y morrón 🌶️</p></div></article>
+      <article class="flavor-card"><img src="huevo_hd.jpg" alt="Tortilla de huevo con jamón y queso"><div class="flavor-info"><h3>Huevo 🥚</h3><p>con jamón y queso</p></div></article>
+      <div class="flavor-phrase">Tortillas<br>rellenas de<br>sabor</div>
+    </div>
+  </section>
+
+  <section class="info" id="ubicacion">
+    <div class="info-inner">
+      <div class="info-item"><div class="info-icon">📍</div><div><h4>Nos encontrás en</h4><p>San Ignacio y Av. Gaona<br>(Ciudadela)</p></div></div>
+      <div class="info-item" id="horarios"><div class="info-icon">◷</div><div><h4>Nuestros horarios</h4><p>Lunes a Viernes<br>6hs a 10hs | 15hs a 20hs</p></div></div>
+      <div class="info-item"><div class="info-icon">🛵</div><div><h4>Pedí por WhatsApp</h4><p>Rápido, fácil<br>y sin vueltas</p></div></div>
+      <div class="info-item"><div class="info-icon">★</div><div><h4>Calidad y buen sabor</h4><p>La clásica tortilla<br>como tiene que ser</p></div></div>
+    </div>
+  </section>
+
+  <section class="footer-visual" id="contacto">
+    <img src="footer_nuevo.jpg" alt="Las Tortillas del Gaucho - tradición en cada bocado">
+    <a class="footer-hotspot" href="https://wa.me/5491157979932?text=Hola%2C%20quiero%20hacer%20un%20pedido%20de%20tortillas" target="_blank" rel="noopener noreferrer" aria-label="Hacé tu pedido por WhatsApp"></a>
+  </section>
+</main>
+
+<footer class="bottom">
+  <div class="bottom-inner">
+    <span>© 2026 Las Tortillas del Gaucho | Ciudadela, Buenos Aires</span>
+    <span>Seguinos en &nbsp; ◎ &nbsp; ♪</span>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5491157979932" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">☎</a>
+</body>
+</html>

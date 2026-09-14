@@ -54,39 +54,31 @@
 
     header{
       background:#050505;
-
-      border-bottom:
-        1px solid rgba(242,182,50,.25);
+      border-bottom:1px solid rgba(242,182,50,.25);
 
       position:sticky;
       top:0;
-
       z-index:1000;
     }
 
     .header-inner{
       max-width:1180px;
-
       margin:auto;
 
       padding:8px 24px;
 
       display:flex;
-
       align-items:center;
-
       gap:30px;
     }
 
     .logo{
       width:120px;
-
       flex:0 0 auto;
     }
 
     .logo img{
       width:100%;
-
       height:96px;
 
       object-fit:contain;
@@ -98,19 +90,15 @@
       flex:1;
 
       display:flex;
-
       justify-content:center;
-
       gap:30px;
     }
 
     nav a{
       font-size:12px;
-
       font-weight:900;
 
       text-transform:uppercase;
-
       white-space:nowrap;
 
       transition:.2s;
@@ -119,14 +107,6 @@
     nav a:hover,
     nav a:first-child{
       color:var(--gold);
-    }
-
-    .social{
-      display:flex;
-
-      gap:14px;
-
-      font-size:21px;
     }
 
     /* =========================
@@ -139,50 +119,37 @@
 
     .hero-inner{
       max-width:1180px;
-
       margin:auto;
 
       min-height:500px;
 
       display:grid;
-
-      grid-template-columns:
-        40% 60%;
+      grid-template-columns:40% 60%;
     }
 
     .hero-copy{
-      padding:
-        56px 10px
-        48px 28px;
+      padding:56px 10px 48px 28px;
 
       display:flex;
-
       flex-direction:column;
-
       justify-content:center;
-
       align-items:flex-start;
     }
 
     .script{
       font-family:Georgia, serif;
-
       font-style:italic;
 
-      text-shadow:
-        0 2px 4px #000;
+      text-shadow:0 2px 4px #000;
     }
 
     .kicker{
       font-size:34px;
-
-      transform:
-        rotate(-2deg);
+      transform:rotate(-2deg);
     }
 
     .hero h1{
       font-size:82px;
-
       line-height:.84;
 
       letter-spacing:-4px;
@@ -190,42 +157,33 @@
       color:var(--gold);
 
       font-weight:950;
-
       text-transform:uppercase;
     }
 
     .sub{
       font-size:38px;
 
-      transform:
-        rotate(-3deg);
+      transform:rotate(-3deg);
 
-      margin:
-        6px 0 20px;
+      margin:6px 0 20px;
     }
 
     .brush{
       background:var(--gold);
-
       color:#060606;
 
       font-weight:950;
 
-      padding:
-        9px 24px;
+      padding:9px 24px;
 
       margin-bottom:20px;
 
-      transform:
-        rotate(-2deg)
-        skew(-6deg);
+      transform:rotate(-2deg) skew(-6deg);
     }
 
     .brush span{
       display:block;
-
-      transform:
-        skew(6deg);
+      transform:skew(6deg);
     }
 
     /* =========================
@@ -234,35 +192,26 @@
 
     .cta{
       display:inline-flex;
-
       align-items:center;
-
       gap:10px;
 
       background:var(--gold);
-
       color:#070707;
 
-      padding:
-        14px 25px;
+      padding:14px 25px;
 
       border-radius:999px;
 
       font-size:16px;
-
       font-weight:950;
 
-      box-shadow:
-        0 5px 0
-        rgba(0,0,0,.35);
+      box-shadow:0 5px 0 rgba(0,0,0,.35);
 
       transition:.2s;
     }
 
     .cta:hover{
-      transform:
-        translateY(-2px);
-
+      transform:translateY(-2px);
       background:#ffc84f;
     }
 
@@ -272,18 +221,15 @@
 
     .hero-image{
       min-height:500px;
-
       position:relative;
 
       background:
-
         linear-gradient(
           90deg,
           #090806 0%,
           rgba(9,8,6,.55) 8%,
           rgba(9,8,6,0) 30%
         ),
-
         url("hero_tortilla.jpg")
         center / cover
         no-repeat;
@@ -293,19 +239,15 @@
       position:absolute;
 
       right:28px;
-
       bottom:55px;
 
       width:170px;
 
       text-align:center;
 
-      font:
-        italic 25px/1.05
-        Georgia,serif;
+      font:italic 25px/1.05 Georgia, serif;
 
-      transform:
-        rotate(-7deg);
+      transform:rotate(-7deg);
     }
 
     /* =========================
@@ -314,44 +256,19 @@
 
     .rip{
       height:25px;
-
       margin-top:-13px;
 
       position:relative;
-
       z-index:2;
 
       background:#090909;
 
       clip-path:polygon(
-        0 40%,
-        4% 65%,
-        8% 42%,
-        12% 68%,
-        16% 44%,
-        20% 63%,
-        24% 40%,
-        28% 66%,
-        32% 44%,
-        36% 68%,
-        40% 42%,
-        44% 61%,
-        48% 40%,
-        52% 66%,
-        56% 43%,
-        60% 61%,
-        64% 39%,
-        68% 68%,
-        72% 43%,
-        76% 62%,
-        80% 40%,
-        84% 67%,
-        88% 45%,
-        92% 62%,
-        96% 40%,
-        100% 64%,
-        100% 100%,
-        0 100%
+        0 40%,4% 65%,8% 42%,12% 68%,16% 44%,20% 63%,
+        24% 40%,28% 66%,32% 44%,36% 68%,40% 42%,44% 61%,
+        48% 40%,52% 66%,56% 43%,60% 61%,64% 39%,68% 68%,
+        72% 43%,76% 62%,80% 40%,84% 67%,88% 45%,92% 62%,
+        96% 40%,100% 64%,100% 100%,0 100%
       );
     }
 
@@ -361,23 +278,17 @@
 
     .sabores{
       background:#090909;
-
-      padding:
-        30px 22px
-        38px;
+      padding:30px 22px 38px;
     }
 
     .section-head{
       text-align:center;
-
       margin-bottom:20px;
     }
 
     .section-head h2{
       font-size:40px;
-
       font-weight:950;
-
       text-transform:uppercase;
     }
 
@@ -386,11 +297,9 @@
       content:"✦";
 
       color:var(--gold);
-
       font-size:27px;
 
-      margin:
-        0 12px;
+      margin:0 12px;
     }
 
     .section-head p{
@@ -401,19 +310,16 @@
       font-size:11px;
 
       letter-spacing:4px;
-
       text-transform:uppercase;
     }
 
     .rule{
       width:520px;
-
       max-width:74vw;
 
       height:1px;
 
-      margin:
-        10px auto 0;
+      margin:10px auto 0;
 
       background:
         linear-gradient(
@@ -430,13 +336,10 @@
 
     .grid{
       max-width:1180px;
-
       margin:auto;
 
       display:grid;
-
-      grid-template-columns:
-        repeat(4,1fr);
+      grid-template-columns:repeat(4,1fr);
 
       gap:13px;
     }
@@ -446,38 +349,29 @@
 
       background:#12100c;
 
-      border:
-        1px solid #775726;
-
+      border:1px solid #775726;
       border-radius:7px;
 
-      box-shadow:
-        0 8px 22px
-        rgba(0,0,0,.3);
+      box-shadow:0 8px 22px rgba(0,0,0,.3);
     }
 
     .card img{
       width:100%;
-
       height:160px;
 
       object-fit:cover;
-
       object-position:center;
     }
 
     .card-info{
       min-height:76px;
 
-      padding:
-        8px 6px 10px;
+      padding:8px 6px 10px;
 
       text-align:center;
 
       display:flex;
-
       flex-direction:column;
-
       justify-content:center;
 
       background:
@@ -489,11 +383,9 @@
 
     .card h3{
       font-size:22px;
-
       line-height:1;
 
       font-weight:950;
-
       text-transform:uppercase;
     }
 
@@ -502,26 +394,20 @@
 
       color:var(--gold);
 
-      font:
-        italic 14px
-        Georgia,serif;
+      font:italic 14px Georgia, serif;
     }
 
     .phrase{
       display:flex;
 
       align-items:center;
-
       justify-content:center;
 
       text-align:center;
 
-      font:
-        italic 31px/1.05
-        Georgia,serif;
+      font:italic 31px/1.05 Georgia, serif;
 
-      transform:
-        rotate(-5deg);
+      transform:rotate(-5deg);
 
       padding:20px;
     }
@@ -532,16 +418,13 @@
 
     .congeladas{
       background:
-
         radial-gradient(
           circle at center,
           #20160d,
           #080808 65%
         );
 
-      padding:
-        55px 20px
-        65px;
+      padding:55px 20px 65px;
 
       text-align:center;
     }
@@ -553,15 +436,9 @@
     .congeladas-head h2{
       color:var(--gold);
 
-      font-size:
-        clamp(
-          30px,
-          5vw,
-          44px
-        );
+      font-size:clamp(30px,5vw,44px);
 
       font-weight:950;
-
       text-transform:uppercase;
 
       margin-bottom:8px;
@@ -573,13 +450,11 @@
       font-size:13px;
 
       letter-spacing:2px;
-
       text-transform:uppercase;
     }
 
     .congeladas-container{
       max-width:760px;
-
       margin:auto;
     }
 
@@ -588,19 +463,14 @@
 
       padding:8px;
 
-      border:
-        1px solid #725225;
-
+      border:1px solid #725225;
       border-radius:15px;
 
-      box-shadow:
-        0 15px 40px
-        rgba(0,0,0,.5);
+      box-shadow:0 15px 40px rgba(0,0,0,.5);
     }
 
     .congeladas-foto img{
       width:100%;
-
       border-radius:10px;
     }
 
@@ -610,7 +480,6 @@
       color:#ddd;
 
       font-size:15px;
-
       line-height:1.6;
     }
 
@@ -628,31 +497,24 @@
 
     .info{
       background:var(--cream);
-
       color:#111;
 
-      padding:
-        30px 22px;
+      padding:30px 22px;
     }
 
     .info-inner{
       max-width:1250px;
-
       margin:auto;
 
       display:grid;
-
-      grid-template-columns:
-        repeat(5,1fr);
+      grid-template-columns:repeat(5,1fr);
 
       gap:20px;
     }
 
     .info-item{
       display:grid;
-
-      grid-template-columns:
-        45px 1fr;
+      grid-template-columns:45px 1fr;
 
       gap:9px;
 
@@ -661,7 +523,6 @@
 
     .info-icon{
       font-size:34px;
-
       text-align:center;
 
       filter:grayscale(1);
@@ -669,7 +530,6 @@
 
     .info h4{
       font-size:13px;
-
       font-weight:950;
 
       text-transform:uppercase;
@@ -679,7 +539,6 @@
 
     .info p{
       font-size:11px;
-
       line-height:1.3;
     }
 
@@ -688,70 +547,51 @@
     }
 
     /* =========================
-       FOOTER FOTO
+       FOTO FINAL
     ========================= */
 
     .footer-visual{
       position:relative;
 
-      background:#050505;
+      width:100%;
 
       overflow:hidden;
+
+      background:#050505;
     }
 
     .footer-visual img{
-      width:100%;
+      display:block;
 
+      width:100%;
       height:auto;
     }
 
-    /* tapa el whatsapp que viene dibujado en la imagen */
-    .tapa-whatsapp{
+    /*
+      Tapa la zona derecha donde
+      están dibujados el botón
+      HACÉ TU PEDIDO y el WhatsApp
+      de la imagen original.
+    */
+
+    .footer-clean-cover{
       position:absolute;
 
+      top:0;
       right:0;
 
-      bottom:0;
-
-      width:10%;
-
-      height:38%;
+      width:31%;
+      height:100%;
 
       background:
         linear-gradient(
           90deg,
-          rgba(0,0,0,0),
-          rgba(0,0,0,.95) 45%,
-          #050505
+          rgba(5,5,5,0) 0%,
+          rgba(5,5,5,.90) 34%,
+          #050505 70%
         );
 
       pointer-events:none;
-    }
-
-    /* botón amarillo de la imagen clickeable */
-    .footer-hotspot{
-      position:absolute;
-
-      left:72%;
-
-      top:36%;
-
-      width:23%;
-
-      height:24%;
-
-      border-radius:999px;
-
-      z-index:3;
-
-      cursor:pointer;
-    }
-
-    .footer-hotspot:focus-visible{
-      outline:
-        3px solid #fff;
-
-      outline-offset:3px;
     }
 
     /* =========================
@@ -762,11 +602,9 @@
       background:#050505;
 
       border-top:
-        1px solid
-        rgba(255,255,255,.08);
+        1px solid rgba(255,255,255,.08);
 
-      padding:
-        14px 22px;
+      padding:14px 22px;
 
       color:#aaa;
 
@@ -775,13 +613,11 @@
 
     .bottom-inner{
       max-width:1180px;
-
       margin:auto;
 
       display:flex;
 
-      justify-content:
-        space-between;
+      justify-content:space-between;
 
       gap:20px;
     }
@@ -794,11 +630,9 @@
       position:fixed;
 
       right:20px;
-
       bottom:20px;
 
       width:62px;
-
       height:62px;
 
       border-radius:50%;
@@ -808,14 +642,12 @@
       display:flex;
 
       align-items:center;
-
       justify-content:center;
 
       z-index:1200;
 
       box-shadow:
-        0 7px 20px
-        rgba(0,0,0,.45);
+        0 7px 20px rgba(0,0,0,.45);
 
       transition:.2s;
     }
@@ -826,7 +658,6 @@
 
     .whatsapp svg{
       width:38px;
-
       height:38px;
     }
 
@@ -837,8 +668,7 @@
     @media(max-width:1000px){
 
       .info-inner{
-        grid-template-columns:
-          repeat(3,1fr);
+        grid-template-columns:repeat(3,1fr);
       }
 
     }
@@ -848,8 +678,7 @@
       .header-inner{
         gap:16px;
 
-        padding:
-          7px 14px;
+        padding:7px 14px;
       }
 
       .logo{
@@ -868,13 +697,8 @@
         font-size:10px;
       }
 
-      .social{
-        display:none;
-      }
-
       .hero-inner{
-        grid-template-columns:
-          45% 55%;
+        grid-template-columns:45% 55%;
       }
 
       .hero h1{
@@ -890,8 +714,7 @@
       }
 
       .grid{
-        grid-template-columns:
-          repeat(3,1fr);
+        grid-template-columns:repeat(3,1fr);
       }
 
       .phrase{
@@ -915,8 +738,7 @@
 
         gap:4px;
 
-        padding:
-          8px 10px 10px;
+        padding:8px 10px 10px;
       }
 
       .logo{
@@ -938,8 +760,7 @@
 
         scrollbar-width:none;
 
-        padding:
-          4px 2px;
+        padding:4px 2px;
       }
 
       nav::-webkit-scrollbar{
@@ -961,20 +782,17 @@
       .hero-copy{
         min-height:455px;
 
-        padding:
-          42px 20px 32px;
+        padding:42px 20px 32px;
 
         align-items:center;
 
         text-align:center;
 
         background:
-
           linear-gradient(
             rgba(5,5,5,.50),
             rgba(5,5,5,.88)
           ),
-
           url("hero_tortilla.jpg")
           center / cover
           no-repeat;
@@ -1003,16 +821,13 @@
       .cta{
         font-size:15px;
 
-        padding:
-          13px 22px;
+        padding:13px 22px;
       }
 
       /* SABORES */
 
       .sabores{
-        padding:
-          25px 11px
-          30px;
+        padding:25px 11px 30px;
       }
 
       .section-head h2{
@@ -1033,8 +848,7 @@
       }
 
       .grid{
-        grid-template-columns:
-          repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
 
         gap:9px;
       }
@@ -1066,9 +880,7 @@
       /* CONGELADAS */
 
       .congeladas{
-        padding:
-          45px 12px
-          50px;
+        padding:45px 12px 50px;
       }
 
       .congeladas-head h2{
@@ -1086,8 +898,7 @@
       /* INFO */
 
       .info{
-        padding:
-          25px 15px;
+        padding:25px 15px;
       }
 
       .info-inner{
@@ -1097,8 +908,7 @@
       }
 
       .info-item{
-        grid-template-columns:
-          45px 1fr;
+        grid-template-columns:45px 1fr;
       }
 
       .info h4{
@@ -1109,35 +919,42 @@
         font-size:12px;
       }
 
-      /* FOOTER */
+      /* FOTO FINAL CELULAR */
 
       .footer-visual{
-        min-height:230px;
+        height:260px;
 
-        background:
-          url("footer_pampa.jpg")
-          center / cover
-          no-repeat;
+        position:relative;
+
+        overflow:hidden;
+
+        background:#050505;
       }
 
       .footer-visual img{
-        display:none;
+        display:block;
+
+        width:155%;
+        max-width:none;
+
+        height:100%;
+
+        object-fit:cover;
+        object-position:center;
+
+        transform:translateX(-17%);
       }
 
-      .footer-hotspot{
-        left:58%;
+      .footer-clean-cover{
+        width:24%;
 
-        top:56%;
-
-        width:36%;
-
-        height:20%;
-      }
-
-      .tapa-whatsapp{
-        width:17%;
-
-        height:40%;
+        background:
+          linear-gradient(
+            90deg,
+            rgba(5,5,5,0),
+            rgba(5,5,5,.95) 45%,
+            #050505 75%
+          );
       }
 
       .bottom-inner{
@@ -1150,17 +967,14 @@
 
       .whatsapp{
         width:58px;
-
         height:58px;
 
         right:16px;
-
         bottom:16px;
       }
 
       .whatsapp svg{
         width:35px;
-
         height:35px;
       }
 
@@ -1187,9 +1001,7 @@
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================= -->
+  <!-- HEADER -->
 
   <header>
 
@@ -1235,23 +1047,13 @@
 
       </nav>
 
-      <div class="social">
-
-        <span>◎</span>
-
-        <span>♪</span>
-
-      </div>
-
     </div>
 
   </header>
 
   <main>
 
-    <!-- =========================
-         HERO
-    ========================= -->
+    <!-- HERO -->
 
     <section
       class="hero"
@@ -1321,9 +1123,7 @@
 
     <div class="rip"></div>
 
-    <!-- =========================
-         SABORES
-    ========================= -->
+    <!-- SABORES -->
 
     <section
       class="sabores"
@@ -1500,9 +1300,7 @@
 
     </section>
 
-    <!-- =========================
-         CONGELADAS
-    ========================= -->
+    <!-- CONGELADAS -->
 
     <section
       class="congeladas"
@@ -1564,9 +1362,7 @@
 
     </section>
 
-    <!-- =========================
-         INFORMACIÓN
-    ========================= -->
+    <!-- INFORMACIÓN -->
 
     <section
       class="info"
@@ -1701,9 +1497,7 @@
 
     </section>
 
-    <!-- =========================
-         FOTO FINAL
-    ========================= -->
+    <!-- FOTO FINAL -->
 
     <section
       class="footer-visual"
@@ -1715,52 +1509,32 @@
         alt="Las Tortillas del Gaucho"
       >
 
-      <a
-        class="footer-hotspot"
-        href="https://wa.me/5491157979932?text=Hola%2C%20quiero%20hacer%20un%20pedido%20de%20tortillas"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Hacé tu pedido"
-      >
-      </a>
-
-      <div class="tapa-whatsapp"></div>
+      <div class="footer-clean-cover"></div>
 
     </section>
 
   </main>
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
+  <!-- FOOTER -->
 
   <footer class="bottom">
 
     <div class="bottom-inner">
 
       <span>
-
-        © 2026
-        Las Tortillas del Gaucho
-        | Ciudadela,
-        Buenos Aires
-
+        © 2026 Las Tortillas del Gaucho |
+        Ciudadela, Buenos Aires
       </span>
 
       <span>
-
-        Seguinos en
-        &nbsp; ◎ &nbsp; ♪
-
+        Seguinos
       </span>
 
     </div>
 
   </footer>
 
-  <!-- =========================
-       WHATSAPP FLOTANTE
-  ========================= -->
+  <!-- WHATSAPP FLOTANTE -->
 
   <a
     class="whatsapp"

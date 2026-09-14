@@ -3,21 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+  name="description"
+  content="Las Tortillas del Gaucho. Tortillas caseras, rellenas y congeladas. Pedidos por WhatsApp."
+>
+
 <title>Las Tortillas del Gaucho</title>
 
 <style>
+
 :root{
-  --gold:#f4b72f;
-  --cream:#f1dfb8;
-  --ink:#060606;
-  --ivory:#fff6df;
-  --border:#76572c;
+  --gold:#f2b632;
+  --cream:#f0dfba;
+  --white:#fff8e8;
+  --black:#050505;
+  --border:#775726;
 }
 
 *{
-  box-sizing:border-box;
   margin:0;
   padding:0;
+  box-sizing:border-box;
 }
 
 html{
@@ -26,7 +33,7 @@ html{
 
 body{
   background:#050505;
-  color:var(--ivory);
+  color:var(--white);
   font-family:Arial,Helvetica,sans-serif;
   overflow-x:hidden;
 }
@@ -46,51 +53,72 @@ img{
    HEADER
 ========================= */
 
-.header{
+header{
   background:#050505;
-  border-bottom:1px solid rgba(244,183,47,.18);
+
+  border-bottom:
+    1px solid rgba(242,182,50,.25);
+
   position:sticky;
   top:0;
+
   z-index:1000;
 }
 
 .header-inner{
   max-width:1180px;
-  min-height:82px;
+
   margin:auto;
-  padding:8px 26px;
+
+  padding:8px 24px;
 
   display:flex;
+
   align-items:center;
-  gap:28px;
+
+  gap:30px;
 }
 
+
+/* LOGO NUEVO */
+
 .logo{
-  width:155px;
+  width:120px;
+
   flex:0 0 auto;
 }
 
 .logo img{
   width:100%;
-  height:100px;
+
+  height:96px;
+
   object-fit:contain;
+
+  border-radius:8px;
 }
+
 
 nav{
   flex:1;
 
   display:flex;
-  justify-content:center;
-  align-items:center;
 
-  gap:34px;
+  justify-content:center;
+
+  gap:30px;
 }
 
 nav a{
   font-size:12px;
+
   font-weight:900;
+
   text-transform:uppercase;
+
   white-space:nowrap;
+
+  transition:.2s;
 }
 
 nav a:hover,
@@ -100,156 +128,194 @@ nav a:first-child{
 
 .social{
   display:flex;
+
   gap:14px;
-  font-size:20px;
-  font-weight:900;
+
+  font-size:21px;
 }
 
 
+
 /* =========================
-   PORTADA
+   HERO
 ========================= */
 
 .hero{
   background:#090806;
-  overflow:hidden;
 }
 
 .hero-inner{
   max-width:1180px;
-  min-height:500px;
+
   margin:auto;
 
+  min-height:500px;
+
   display:grid;
-  grid-template-columns:39% 61%;
+
+  grid-template-columns:
+    40% 60%;
 }
 
 .hero-copy{
-  padding:52px 12px 48px 28px;
+  padding:
+    56px 10px
+    48px 28px;
 
   display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:flex-start;
 
-  z-index:2;
+  flex-direction:column;
+
+  justify-content:center;
+
+  align-items:flex-start;
 }
 
 .script{
-  font-family:Georgia,serif;
+  font-family:
+    Georgia, serif;
+
   font-style:italic;
-  color:#fff5dd;
-  text-shadow:0 2px 3px #000;
+
+  text-shadow:
+    0 2px 4px #000;
 }
 
-.hero-kicker{
-  font-size:35px;
-  transform:rotate(-2deg);
-  line-height:.95;
+.kicker{
+  font-size:34px;
+
+  transform:
+    rotate(-2deg);
 }
 
-.hero-title{
+.hero h1{
   font-size:82px;
-  line-height:.82;
-  font-weight:950;
+
+  line-height:.84;
+
+  letter-spacing:-4px;
 
   color:var(--gold);
 
-  letter-spacing:-4px;
+  font-weight:950;
+
   text-transform:uppercase;
 }
 
-.hero-sub{
-  margin:8px 0 20px;
-
+.sub{
   font-size:38px;
-  transform:rotate(-3deg);
-  line-height:.95;
+
+  transform:
+    rotate(-3deg);
+
+  margin:
+    6px 0 20px;
 }
 
-.paint-label{
-  display:inline-block;
-
+.brush{
   background:var(--gold);
-  color:#070707;
 
-  font-size:16px;
+  color:#060606;
+
   font-weight:950;
 
-  padding:9px 25px;
+  padding:
+    9px 24px;
+
   margin-bottom:20px;
 
-  transform:rotate(-2deg) skew(-6deg);
+  transform:
+    rotate(-2deg)
+    skew(-6deg);
 }
 
-.paint-label span{
+.brush span{
   display:block;
-  transform:skew(6deg);
+
+  transform:
+    skew(6deg);
 }
 
 
 /* =========================
-   BOTONES
+   BOTÓN
 ========================= */
 
-.order-btn{
+.cta{
   display:inline-flex;
+
   align-items:center;
-  gap:12px;
+
+  gap:10px;
+
+  background:var(--gold);
+
+  color:#070707;
+
+  padding:
+    14px 25px;
 
   border-radius:999px;
 
-  background:var(--gold);
-  color:#080808;
-
-  padding:14px 25px;
+  font-size:16px;
 
   font-weight:950;
-  font-size:17px;
 
-  box-shadow:0 5px 0 rgba(0,0,0,.35);
+  box-shadow:
+    0 5px 0
+    rgba(0,0,0,.35);
 
   transition:.2s;
 }
 
-.order-btn:hover{
-  transform:translateY(-2px) scale(1.015);
-  background:#ffc747;
+.cta:hover{
+  transform:
+    translateY(-2px);
+
+  background:#ffc84f;
 }
 
 
 /* =========================
-   IMAGEN PRINCIPAL
+   IMAGEN HERO
 ========================= */
 
-.hero-visual{
+.hero-image{
   min-height:500px;
+
   position:relative;
 
   background:
+
     linear-gradient(
       90deg,
       #090806 0%,
-      rgba(9,8,6,.55) 7%,
-      rgba(9,8,6,0) 28%
+      rgba(9,8,6,.55) 8%,
+      rgba(9,8,6,0) 30%
     ),
-    url("hero_tortilla.jpg") center/cover no-repeat;
+
+    url("hero_tortilla.jpg")
+    center / cover
+    no-repeat;
 }
 
-.hero-note{
+.quote{
   position:absolute;
 
-  right:30px;
-  bottom:62px;
+  right:28px;
 
-  font-size:24px;
-  line-height:1.05;
+  bottom:55px;
+
+  width:170px;
 
   text-align:center;
 
-  transform:rotate(-7deg);
+  font:
+    italic 25px/1.05
+    Georgia,serif;
 
-  width:165px;
+  transform:
+    rotate(-7deg);
 }
 
 
@@ -259,38 +325,40 @@ nav a:first-child{
 
 .rip{
   height:25px;
-  margin-top:-14px;
+
+  margin-top:-13px;
 
   position:relative;
-  z-index:4;
 
-  background:#0a0a09;
+  z-index:2;
+
+  background:#090909;
 
   clip-path:polygon(
-    0 38%,
-    4% 64%,
+    0 40%,
+    4% 65%,
     8% 42%,
-    12% 70%,
-    16% 43%,
-    20% 62%,
+    12% 68%,
+    16% 44%,
+    20% 63%,
     24% 40%,
     28% 66%,
     32% 44%,
     36% 68%,
     40% 42%,
     44% 61%,
-    48% 39%,
-    52% 65%,
-    56% 42%,
+    48% 40%,
+    52% 66%,
+    56% 43%,
     60% 61%,
-    64% 38%,
-    68% 67%,
+    64% 39%,
+    68% 68%,
     72% 43%,
     76% 62%,
     80% 40%,
-    84% 68%,
+    84% 67%,
     88% 45%,
-    92% 63%,
+    92% 62%,
     96% 40%,
     100% 64%,
     100% 100%,
@@ -299,145 +367,144 @@ nav a:first-child{
 }
 
 
+
 /* =========================
    SABORES
 ========================= */
 
 .sabores{
-  background:
-    radial-gradient(
-      circle at 50% 0,
-      rgba(95,63,19,.12),
-      transparent 34%
-    ),
-    #090909;
+  background:#090909;
 
-  padding:28px 24px 34px;
+  padding:
+    30px 22px
+    38px;
 }
 
-.sabores-head{
+.section-head{
   text-align:center;
-  margin-bottom:18px;
+
+  margin-bottom:20px;
 }
 
-.sabores-head h2{
-  font-size:41px;
-  line-height:1;
+.section-head h2{
+  font-size:40px;
 
   font-weight:950;
 
   text-transform:uppercase;
-  letter-spacing:-1px;
 }
 
-.sabores-head h2:before,
-.sabores-head h2:after{
+.section-head h2:before,
+.section-head h2:after{
   content:"✦";
 
   color:var(--gold);
 
-  margin:0 13px;
+  font-size:27px;
 
-  font-size:28px;
-
-  vertical-align:middle;
+  margin:
+    0 12px;
 }
 
-.sabores-head p{
+.section-head p{
   margin-top:8px;
 
-  color:#ddd0b2;
+  color:#dacdab;
 
   font-size:11px;
 
-  text-transform:uppercase;
-
   letter-spacing:4px;
+
+  text-transform:uppercase;
 }
 
 .rule{
-  height:1px;
-
   width:520px;
+
   max-width:74vw;
 
-  margin:10px auto 0;
+  height:1px;
+
+  margin:
+    10px auto 0;
 
   background:
     linear-gradient(
       90deg,
       transparent,
-      #b4873e,
+      #ad7b2f,
       transparent
     );
 }
 
 
+
 /* =========================
-   TARJETAS
+   TARJETAS SABORES
 ========================= */
 
-.flavor-grid{
+.grid{
   max-width:1180px;
+
   margin:auto;
 
   display:grid;
 
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:
+    repeat(4,1fr);
 
   gap:13px;
 }
 
-.flavor-card{
+.card{
   overflow:hidden;
-
-  border:1px solid var(--border);
-
-  border-radius:7px;
 
   background:#12100c;
 
+  border:
+    1px solid #775726;
+
+  border-radius:7px;
+
   box-shadow:
-    0 8px 22px rgba(0,0,0,.3);
+    0 8px 22px
+    rgba(0,0,0,.3);
 }
 
-.flavor-card img{
+.card img{
   width:100%;
-  height:158px;
+
+  height:160px;
 
   object-fit:cover;
 
-  /* ayuda a que las fotos tengan un poco más de fuerza */
-  filter:
-    contrast(1.06)
-    saturate(1.08)
-    brightness(1.03);
+  object-position:center;
 }
 
-.flavor-info{
+.card-info{
   min-height:76px;
 
-  padding:8px 6px 10px;
+  padding:
+    8px 6px 10px;
+
+  text-align:center;
 
   display:flex;
+
   flex-direction:column;
 
   justify-content:center;
-  align-items:center;
 
   background:
     linear-gradient(
       #17140f,
-      #0a0907
+      #0b0a08
     );
-
-  text-align:center;
 }
 
-.flavor-info h3{
-  color:#fff7e9;
-
+.card h3{
   font-size:22px;
+
   line-height:1;
 
   font-weight:950;
@@ -445,81 +512,182 @@ nav a:first-child{
   text-transform:uppercase;
 }
 
-.flavor-info p{
+.card p{
   margin-top:4px;
 
   color:var(--gold);
 
-  font-family:Georgia,serif;
-  font-style:italic;
-
-  font-size:14px;
+  font:
+    italic 14px
+    Georgia,serif;
 }
 
-.flavor-phrase{
+.phrase{
   display:flex;
 
   align-items:center;
+
   justify-content:center;
 
   text-align:center;
 
-  color:#fff1d2;
+  font:
+    italic 31px/1.05
+    Georgia,serif;
 
-  font-family:Georgia,serif;
-  font-style:italic;
-
-  font-size:31px;
-
-  line-height:1.02;
-
-  transform:rotate(-5deg);
+  transform:
+    rotate(-5deg);
 
   padding:20px;
 }
 
 
+
 /* =========================
-   INFORMACIÓN
+   TORTILLAS CONGELADAS
+========================= */
+
+.congeladas{
+  background:
+
+    radial-gradient(
+      circle at center,
+      #20160d,
+      #080808 65%
+    );
+
+  padding:
+    55px 20px
+    65px;
+
+  text-align:center;
+}
+
+.congeladas-head{
+  margin-bottom:30px;
+}
+
+.congeladas-head h2{
+  color:var(--gold);
+
+  font-size:
+    clamp(
+      30px,
+      5vw,
+      44px
+    );
+
+  font-weight:950;
+
+  text-transform:uppercase;
+
+  margin-bottom:8px;
+}
+
+.congeladas-head p{
+  color:#d7c9ab;
+
+  font-size:13px;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+}
+
+.congeladas-container{
+  max-width:760px;
+
+  margin:auto;
+}
+
+.congeladas-foto{
+  background:#111;
+
+  padding:8px;
+
+  border:
+    1px solid #725225;
+
+  border-radius:15px;
+
+  box-shadow:
+    0 15px 40px
+    rgba(0,0,0,.5);
+}
+
+.congeladas-foto img{
+  width:100%;
+
+  border-radius:10px;
+}
+
+.congeladas-texto{
+  margin-top:25px;
+
+  color:#ddd;
+
+  font-size:15px;
+
+  line-height:1.6;
+}
+
+.congeladas-texto strong{
+  color:var(--gold);
+}
+
+.congeladas .cta{
+  margin-top:20px;
+}
+
+
+
+/* =========================
+   FRANJA DE INFORMACIÓN
 ========================= */
 
 .info{
   background:var(--cream);
-  color:#101010;
 
-  padding:30px 24px;
+  color:#111;
+
+  padding:
+    30px 22px;
 }
 
 .info-inner{
-  max-width:1180px;
+  max-width:1250px;
+
   margin:auto;
 
   display:grid;
 
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:
+    repeat(5,1fr);
 
-  gap:28px;
+  gap:20px;
 }
 
 .info-item{
   display:grid;
 
-  grid-template-columns:48px 1fr;
+  grid-template-columns:
+    45px 1fr;
 
-  gap:10px;
+  gap:9px;
 
   align-items:center;
 }
 
 .info-icon{
-  font-size:36px;
+  font-size:34px;
+
   text-align:center;
 
   filter:grayscale(1);
 }
 
-.info-item h4{
-  font-size:14px;
+.info h4{
+  font-size:13px;
 
   font-weight:950;
 
@@ -528,20 +696,31 @@ nav a:first-child{
   margin-bottom:3px;
 }
 
-.info-item p{
-  font-size:12px;
-  line-height:1.25;
+.info p{
+  font-size:11px;
+
+  line-height:1.3;
 }
 
 
+/* ENVÍO DESTACADO */
+
+.envio-gratis{
+  color:#111;
+}
+
+.envio-gratis strong{
+  color:#9b5b00;
+}
+
+
+
 /* =========================
-   FOTO FINAL
+   FOOTER CON IMAGEN
 ========================= */
 
 .footer-visual{
   position:relative;
-
-  width:100%;
 
   background:#050505;
 
@@ -550,25 +729,54 @@ nav a:first-child{
 
 .footer-visual img{
   width:100%;
+
   height:auto;
 }
 
 
 /*
-  Este enlace invisible está encima
-  del botón que YA APARECE en la foto.
+Oculta el WhatsApp que ya viene
+dibujado dentro de footer_pampa.jpg.
+*/
 
-  Así no aparece un segundo botón repetido.
+.tapa-whatsapp{
+  position:absolute;
+
+  right:0;
+
+  bottom:0;
+
+  width:9%;
+
+  height:35%;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0),
+      rgba(0,0,0,.95) 45%,
+      #050505
+    );
+
+  pointer-events:none;
+}
+
+
+/*
+Hace clickeable el botón amarillo
+"HACÉ TU PEDIDO" de la imagen.
 */
 
 .footer-hotspot{
   position:absolute;
 
-  left:71.4%;
-  top:40%;
+  left:72%;
 
-  width:24%;
-  height:22%;
+  top:36%;
+
+  width:23%;
+
+  height:24%;
 
   border-radius:999px;
 
@@ -578,90 +786,176 @@ nav a:first-child{
 }
 
 .footer-hotspot:focus-visible{
-  outline:3px solid #fff;
-  outline-offset:4px;
+  outline:
+    3px solid #fff;
+
+  outline-offset:3px;
 }
 
 
+
 /* =========================
-   FOOTER
+   FOOTER NEGRO
 ========================= */
 
 .bottom{
   background:#050505;
 
   border-top:
-    1px solid rgba(255,255,255,.09);
+    1px solid
+    rgba(255,255,255,.08);
 
-  color:#a8a8a8;
+  padding:
+    14px 22px;
+
+  color:#aaa;
 
   font-size:11px;
-
-  padding:14px 22px;
 }
 
 .bottom-inner{
   max-width:1180px;
+
   margin:auto;
 
   display:flex;
 
-  justify-content:space-between;
+  justify-content:
+    space-between;
 
   gap:20px;
 }
+
 
 
 /* =========================
    WHATSAPP FLOTANTE
 ========================= */
 
-.whatsapp-float{
+.whatsapp{
   position:fixed;
 
   right:20px;
+
   bottom:20px;
 
-  width:58px;
-  height:58px;
+  width:62px;
+
+  height:62px;
 
   border-radius:50%;
+
+  background:#25d366;
 
   display:flex;
 
   align-items:center;
+
   justify-content:center;
-
-  background:#25d366;
-  color:#fff;
-
-  font-size:28px;
-  font-weight:950;
 
   z-index:1200;
 
   box-shadow:
-    0 8px 22px rgba(0,0,0,.45);
+    0 7px 20px
+    rgba(0,0,0,.45);
+
+  transition:.2s;
 }
+
+.whatsapp:hover{
+  transform:
+    scale(1.08);
+}
+
+
+/* LOGO WHATSAPP HECHO EN CSS */
+
+.whatsapp-icon{
+  width:31px;
+
+  height:31px;
+
+  border:
+    3px solid white;
+
+  border-radius:50%;
+
+  position:relative;
+}
+
+.whatsapp-icon::after{
+  content:"";
+
+  position:absolute;
+
+  width:9px;
+
+  height:9px;
+
+  border-left:
+    3px solid white;
+
+  border-bottom:
+    3px solid white;
+
+  left:-4px;
+
+  bottom:-3px;
+
+  transform:
+    rotate(-20deg);
+}
+
+.whatsapp-icon::before{
+  content:"☎";
+
+  color:white;
+
+  font-size:19px;
+
+  font-weight:bold;
+
+  position:absolute;
+
+  left:4px;
+
+  top:2px;
+
+  transform:
+    rotate(-18deg);
+}
+
 
 
 /* =========================
    TABLET
 ========================= */
 
+@media(max-width:1000px){
+
+  .info-inner{
+    grid-template-columns:
+      repeat(3,1fr);
+  }
+
+}
+
+
 @media(max-width:900px){
 
   .header-inner{
-    gap:15px;
-    padding:7px 15px;
+    gap:16px;
+
+    padding:
+      7px 14px;
   }
 
   .logo{
-    width:120px;
+    width:105px;
   }
 
   .logo img{
-    height:80px;
+    height:78px;
   }
 
   nav{
@@ -677,34 +971,33 @@ nav a:first-child{
   }
 
   .hero-inner{
-    grid-template-columns:44% 56%;
+    grid-template-columns:
+      45% 55%;
   }
 
-  .hero-title{
-    font-size:61px;
+  .hero h1{
+    font-size:60px;
   }
 
-  .hero-kicker{
+  .kicker{
     font-size:25px;
   }
 
-  .hero-sub{
+  .sub{
     font-size:29px;
   }
 
-  .flavor-grid{
-    grid-template-columns:repeat(3,1fr);
+  .grid{
+    grid-template-columns:
+      repeat(3,1fr);
   }
 
-  .flavor-phrase{
+  .phrase{
     display:none;
   }
 
-  .info-inner{
-    grid-template-columns:repeat(2,1fr);
-  }
-
 }
+
 
 
 /* =========================
@@ -713,26 +1006,25 @@ nav a:first-child{
 
 @media(max-width:650px){
 
-  .header{
+  header{
     position:relative;
   }
 
   .header-inner{
     flex-direction:column;
 
-    min-height:auto;
+    gap:4px;
 
-    padding:8px 10px 10px;
-
-    gap:5px;
+    padding:
+      8px 10px 10px;
   }
 
   .logo{
-    width:105px;
+    width:95px;
   }
 
   .logo img{
-    height:68px;
+    height:75px;
   }
 
   nav{
@@ -744,9 +1036,10 @@ nav a:first-child{
 
     gap:18px;
 
-    padding:4px 3px;
-
     scrollbar-width:none;
+
+    padding:
+      4px 2px;
   }
 
   nav::-webkit-scrollbar{
@@ -760,140 +1053,176 @@ nav a:first-child{
   }
 
 
-  /* PORTADA CELULAR */
+  /* HERO */
 
   .hero-inner{
     grid-template-columns:1fr;
   }
 
   .hero-copy{
-    min-height:450px;
+    min-height:455px;
 
-    padding:40px 20px 32px;
+    padding:
+      42px 20px 32px;
 
     align-items:center;
 
     text-align:center;
 
     background:
+
       linear-gradient(
-        rgba(6,6,5,.55),
-        rgba(6,6,5,.88)
+        rgba(5,5,5,.50),
+        rgba(5,5,5,.88)
       ),
+
       url("hero_tortilla.jpg")
-      center/cover no-repeat;
+      center / cover
+      no-repeat;
   }
 
-  .hero-visual{
+  .hero-image{
     display:none;
   }
 
-  .hero-kicker{
+  .kicker{
     font-size:28px;
   }
 
-  .hero-title{
-    font-size:63px;
+  .hero h1{
+    font-size:62px;
   }
 
-  .hero-sub{
+  .sub{
     font-size:30px;
   }
 
-  .paint-label{
+  .brush{
     font-size:14px;
   }
 
-  .order-btn{
+  .cta{
     font-size:15px;
 
-    padding:13px 22px;
+    padding:
+      13px 22px;
   }
 
 
-  /* SABORES CELULAR */
+  /* SABORES */
 
   .sabores{
-    padding:25px 11px 30px;
+    padding:
+      25px 11px
+      30px;
   }
 
-  .sabores-head h2{
+  .section-head h2{
     font-size:28px;
   }
 
-  .sabores-head h2:before,
-  .sabores-head h2:after{
+  .section-head h2:before,
+  .section-head h2:after{
     font-size:18px;
 
     margin:0 5px;
   }
 
-  .sabores-head p{
+  .section-head p{
     font-size:8px;
 
     letter-spacing:2.4px;
   }
 
-  .flavor-grid{
+  .grid{
     grid-template-columns:
       repeat(2,1fr);
 
     gap:9px;
   }
 
-  .flavor-card img{
-    height:115px;
+  .card img{
+    height:118px;
   }
 
-  .flavor-info{
+  .card-info{
     min-height:63px;
-
-    padding:7px 4px;
   }
 
-  .flavor-info h3{
+  .card h3{
     font-size:16px;
   }
 
-  .flavor-info p{
+  .card p{
     font-size:11px;
   }
 
-  .flavor-phrase{
+  .phrase{
     display:flex;
 
-    min-height:178px;
+    min-height:181px;
 
     font-size:22px;
   }
 
 
-  /* INFO CELULAR */
+  /* CONGELADAS */
+
+  .congeladas{
+    padding:
+      45px 12px
+      50px;
+  }
+
+  .congeladas-head h2{
+    font-size:29px;
+  }
+
+  .congeladas-head p{
+    font-size:10px;
+  }
+
+  .congeladas-container{
+    max-width:450px;
+  }
+
+
+  /* INFORMACIÓN */
 
   .info{
-    padding:24px 14px;
+    padding:
+      25px 15px;
   }
 
   .info-inner{
     grid-template-columns:1fr;
 
-    gap:18px;
+    gap:20px;
   }
 
   .info-item{
     grid-template-columns:
-      44px 1fr;
+      45px 1fr;
+  }
+
+  .info h4{
+    font-size:13px;
+  }
+
+  .info p{
+    font-size:12px;
   }
 
 
-  /* FOTO FINAL CELULAR */
+  /* FOOTER */
 
   .footer-visual{
     min-height:230px;
 
     background:
       url("footer_pampa.jpg")
-      center/cover no-repeat;
+      center / cover
+      no-repeat;
   }
 
   .footer-visual img{
@@ -901,13 +1230,20 @@ nav a:first-child{
   }
 
   .footer-hotspot{
-    left:57%;
-    top:57%;
+    left:58%;
 
-    width:37%;
-    height:19%;
+    top:56%;
+
+    width:36%;
+
+    height:20%;
   }
 
+  .tapa-whatsapp{
+    width:15%;
+
+    height:35%;
+  }
 
   .bottom-inner{
     flex-direction:column;
@@ -920,17 +1256,19 @@ nav a:first-child{
 }
 
 
+/* CELULAR CHICO */
+
 @media(max-width:380px){
 
-  .hero-title{
-    font-size:52px;
+  .hero h1{
+    font-size:51px;
   }
 
-  .sabores-head h2{
+  .section-head h2{
     font-size:24px;
   }
 
-  .flavor-info h3{
+  .card h3{
     font-size:14px;
   }
 
@@ -947,7 +1285,7 @@ nav a:first-child{
      HEADER
 ========================= -->
 
-<header class="header">
+<header>
 
   <div class="header-inner">
 
@@ -957,21 +1295,25 @@ nav a:first-child{
     >
 
       <img
-        src="logo.jpg"
+        src="logo_nuevo.jpg"
         alt="Las Tortillas del Gaucho"
       >
 
     </a>
 
 
-    <nav aria-label="Menú principal">
+    <nav>
 
       <a href="#inicio">
         Inicio
       </a>
 
       <a href="#sabores">
-        Nuestros Sabores
+        Nuestros sabores
+      </a>
+
+      <a href="#congeladas">
+        Congeladas
       </a>
 
       <a href="#ubicacion">
@@ -1007,7 +1349,7 @@ nav a:first-child{
 
 
 <!-- =========================
-     PORTADA
+     HERO
 ========================= -->
 
 <section
@@ -1020,28 +1362,26 @@ nav a:first-child{
 
     <div class="hero-copy">
 
-      <div class="hero-kicker script">
+      <div class="kicker script">
 
         Llevamos la clásica
 
       </div>
 
 
-      <h1 class="hero-title">
-
+      <h1>
         TORTILLA
-
       </h1>
 
 
-      <div class="hero-sub script">
+      <div class="sub script">
 
         a otro nivel
 
       </div>
 
 
-      <div class="paint-label">
+      <div class="brush">
 
         <span>
           SABORES QUE ENAMORAN
@@ -1051,22 +1391,21 @@ nav a:first-child{
 
 
       <a
-        class="order-btn"
+        class="cta"
         href="https://wa.me/5491157979932?text=Hola%2C%20quiero%20hacer%20un%20pedido%20de%20tortillas"
         target="_blank"
-        rel="noopener noreferrer"
       >
 
-        ☎ &nbsp; HACÉ TU PEDIDO &nbsp; ›
+        ☎ HACÉ TU PEDIDO ›
 
       </a>
 
     </div>
 
 
-    <div class="hero-visual">
+    <div class="hero-image">
 
-      <div class="hero-note script">
+      <div class="quote">
 
         Más que
         <br>
@@ -1097,15 +1436,15 @@ nav a:first-child{
   id="sabores"
 >
 
-
-  <div class="sabores-head">
+  <div class="section-head">
 
     <h2>
       Nuestros Sabores
     </h2>
 
     <p>
-      Tortillas caseras, bien argentinas
+      Tortillas caseras,
+      bien argentinas
     </p>
 
     <div class="rule"></div>
@@ -1113,20 +1452,17 @@ nav a:first-child{
   </div>
 
 
+  <div class="grid">
 
-  <div class="flavor-grid">
 
-
-    <!-- ROQUEFORT -->
-
-    <article class="flavor-card">
+    <article class="card">
 
       <img
         src="roquefort.jpg"
-        alt="Tortilla de roquefort y muzza"
+        alt="Roquefort y muzza"
       >
 
-      <div class="flavor-info">
+      <div class="card-info">
 
         <h3>
           Roquefort
@@ -1142,16 +1478,14 @@ nav a:first-child{
 
 
 
-    <!-- PROVOLETA -->
-
-    <article class="flavor-card">
+    <article class="card">
 
       <img
         src="provoleta.jpg"
-        alt="Tortilla de provoleta con jamón y queso"
+        alt="Provoleta"
       >
 
-      <div class="flavor-info">
+      <div class="card-info">
 
         <h3>
           Provoleta
@@ -1167,16 +1501,14 @@ nav a:first-child{
 
 
 
-    <!-- CAPRESE -->
-
-    <article class="flavor-card">
+    <article class="card">
 
       <img
         src="caprese.jpg"
-        alt="Tortilla caprese"
+        alt="Caprese"
       >
 
-      <div class="flavor-info">
+      <div class="card-info">
 
         <h3>
           Caprese 🌿
@@ -1188,16 +1520,14 @@ nav a:first-child{
 
 
 
-    <!-- FUGAZZETA -->
-
-    <article class="flavor-card">
+    <article class="card">
 
       <img
         src="fugazzeta.jpg"
-        alt="Tortilla fugazzeta"
+        alt="Fugazzeta"
       >
 
-      <div class="flavor-info">
+      <div class="card-info">
 
         <h3>
           Fugazzeta 🧅
@@ -1209,16 +1539,14 @@ nav a:first-child{
 
 
 
-    <!-- JAMÓN -->
-
-    <article class="flavor-card">
+    <article class="card">
 
       <img
         src="jamon_queso.jpg"
-        alt="Tortilla de jamón y queso"
+        alt="Jamón y queso"
       >
 
-      <div class="flavor-info">
+      <div class="card-info">
 
         <h3>
           Jamón
@@ -1234,16 +1562,14 @@ nav a:first-child{
 
 
 
-    <!-- JAMÓN MUZZA MORRÓN -->
-
-    <article class="flavor-card">
+    <article class="card">
 
       <img
         src="jamon_muzza_morron.jpg"
-        alt="Tortilla de jamón, muzza y morrón"
+        alt="Jamón, muzza y morrón"
       >
 
-      <div class="flavor-info">
+      <div class="card-info">
 
         <h3>
           Jamón, Muzza
@@ -1259,16 +1585,14 @@ nav a:first-child{
 
 
 
-    <!-- HUEVO -->
-
-    <article class="flavor-card">
+    <article class="card">
 
       <img
         src="huevo.jpg"
-        alt="Tortilla de huevo con jamón y queso"
+        alt="Huevo"
       >
 
-      <div class="flavor-info">
+      <div class="card-info">
 
         <h3>
           Huevo 🥚
@@ -1284,9 +1608,7 @@ nav a:first-child{
 
 
 
-    <!-- FRASE -->
-
-    <div class="flavor-phrase">
+    <div class="phrase">
 
       Tortillas
       <br>
@@ -1295,6 +1617,72 @@ nav a:first-child{
       sabor
 
     </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     TORTILLAS CONGELADAS
+========================= -->
+
+<section
+  class="congeladas"
+  id="congeladas"
+>
+
+  <div class="congeladas-head">
+
+    <h2>
+      Tortillas Congeladas
+    </h2>
+
+    <p>
+      El mismo sabor,
+      listo para cuando quieras
+    </p>
+
+  </div>
+
+
+  <div class="congeladas-container">
+
+
+    <div class="congeladas-foto">
+
+      <img
+        src="tortillas_congeladas.jpg"
+        alt="Tortillas congeladas Las Tortillas del Gaucho"
+      >
+
+    </div>
+
+
+    <div class="congeladas-texto">
+
+      <p>
+        Ideales para tener siempre listas en casa.
+        <strong>
+          Pedí tus tortillas congeladas
+        </strong>
+        y disfrutalas cuando quieras.
+      </p>
+
+    </div>
+
+
+    <a
+      class="cta"
+      href="https://wa.me/5491157979932?text=Hola%2C%20quiero%20consultar%20por%20las%20tortillas%20congeladas"
+      target="_blank"
+    >
+
+      ☎ PEDIR CONGELADAS
+
+    </a>
 
 
   </div>
@@ -1330,7 +1718,7 @@ nav a:first-child{
         <p>
           San Ignacio y Av. Gaona
           <br>
-          (Ciudadela)
+          Ciudadela
         </p>
 
       </div>
@@ -1355,9 +1743,9 @@ nav a:first-child{
         </h4>
 
         <p>
-          Lunes a Viernes
+          Todos los días
           <br>
-          6hs a 10hs | 15hs a 20hs
+          6:00 a 19:00 hs
         </p>
 
       </div>
@@ -1370,6 +1758,38 @@ nav a:first-child{
 
       <div class="info-icon">
         🛵
+      </div>
+
+      <div>
+
+        <h4>
+          Envíos a domicilio
+        </h4>
+
+        <p class="envio-gratis">
+
+          Hasta
+          <strong>
+            3 km GRATIS
+          </strong>
+
+          <br>
+
+          Más de 3 km:
+          costo según distancia
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="info-item">
+
+      <div class="info-icon">
+        💬
       </div>
 
       <div>
@@ -1430,23 +1850,31 @@ nav a:first-child{
 
   <img
     src="footer_pampa.jpg"
-    alt="Las Tortillas del Gaucho - tradición en cada bocado"
+    alt="Las Tortillas del Gaucho"
   >
 
 
   <!--
-    Este enlace está encima del botón
-    HACÉ TU PEDIDO que ya está en la foto.
+  Hace clickeable el botón
+  amarillo de la propia imagen
   -->
 
   <a
     class="footer-hotspot"
     href="https://wa.me/5491157979932?text=Hola%2C%20quiero%20hacer%20un%20pedido%20de%20tortillas"
     target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Hacé tu pedido por WhatsApp"
+    aria-label="Hacé tu pedido"
   >
   </a>
+
+
+  <!--
+  Tapa el WhatsApp viejo
+  dibujado dentro de la foto.
+  -->
+
+  <div class="tapa-whatsapp"></div>
+
 
 </section>
 
@@ -1464,12 +1892,20 @@ nav a:first-child{
   <div class="bottom-inner">
 
     <span>
-      © 2026 Las Tortillas del Gaucho |
-      Ciudadela, Buenos Aires
+
+      © 2026
+      Las Tortillas del Gaucho
+      | Ciudadela,
+      Buenos Aires
+
     </span>
 
+
     <span>
-      Seguinos en &nbsp; ◎ &nbsp; ♪
+
+      Seguinos en
+      &nbsp; ◎ &nbsp; ♪
+
     </span>
 
   </div>
@@ -1479,18 +1915,17 @@ nav a:first-child{
 
 
 <!-- =========================
-     WHATSAPP FLOTANTE
+     WHATSAPP FLOTANTE NUEVO
 ========================= -->
 
 <a
-  class="whatsapp-float"
-  href="https://wa.me/5491157979932"
+  class="whatsapp"
+  href="https://wa.me/5491157979932?text=Hola%2C%20quiero%20hacer%20un%20pedido"
   target="_blank"
-  rel="noopener noreferrer"
   aria-label="Contactar por WhatsApp"
 >
 
-  ☎
+  <span class="whatsapp-icon"></span>
 
 </a>
 

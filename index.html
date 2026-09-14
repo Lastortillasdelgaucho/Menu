@@ -1,1934 +1,1788 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-  name="description"
-  content="Las Tortillas del Gaucho. Tortillas caseras, rellenas y congeladas. Pedidos por WhatsApp."
->
+  <meta
+    name="description"
+    content="Las Tortillas del Gaucho. Tortillas caseras, rellenas y congeladas. Pedidos por WhatsApp."
+  >
 
-<title>Las Tortillas del Gaucho</title>
+  <title>Las Tortillas del Gaucho</title>
 
-<style>
+  <style>
 
-:root{
-  --gold:#f2b632;
-  --cream:#f0dfba;
-  --white:#fff8e8;
-  --black:#050505;
-  --border:#775726;
-}
+    :root{
+      --gold:#f2b632;
+      --cream:#f0dfba;
+      --white:#fff8e8;
+      --black:#050505;
+      --border:#775726;
+    }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
-html{
-  scroll-behavior:smooth;
-}
+    html{
+      scroll-behavior:smooth;
+    }
 
-body{
-  background:#050505;
-  color:var(--white);
-  font-family:Arial,Helvetica,sans-serif;
-  overflow-x:hidden;
-}
+    body{
+      background:#050505;
+      color:var(--white);
+      font-family:Arial, Helvetica, sans-serif;
+      overflow-x:hidden;
+    }
 
-a{
-  text-decoration:none;
-  color:inherit;
-}
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
 
-img{
-  display:block;
-  max-width:100%;
-}
+    img{
+      display:block;
+      max-width:100%;
+    }
 
+    /* =========================
+       HEADER
+    ========================= */
 
-/* =========================
-   HEADER
-========================= */
+    header{
+      background:#050505;
 
-header{
-  background:#050505;
+      border-bottom:
+        1px solid rgba(242,182,50,.25);
 
-  border-bottom:
-    1px solid rgba(242,182,50,.25);
+      position:sticky;
+      top:0;
 
-  position:sticky;
-  top:0;
+      z-index:1000;
+    }
 
-  z-index:1000;
-}
+    .header-inner{
+      max-width:1180px;
 
-.header-inner{
-  max-width:1180px;
+      margin:auto;
 
-  margin:auto;
+      padding:8px 24px;
 
-  padding:8px 24px;
+      display:flex;
 
-  display:flex;
+      align-items:center;
 
-  align-items:center;
+      gap:30px;
+    }
 
-  gap:30px;
-}
+    .logo{
+      width:120px;
 
+      flex:0 0 auto;
+    }
 
-/* LOGO NUEVO */
+    .logo img{
+      width:100%;
 
-.logo{
-  width:120px;
+      height:96px;
 
-  flex:0 0 auto;
-}
+      object-fit:contain;
 
-.logo img{
-  width:100%;
+      border-radius:8px;
+    }
 
-  height:96px;
+    nav{
+      flex:1;
 
-  object-fit:contain;
+      display:flex;
 
-  border-radius:8px;
-}
+      justify-content:center;
 
+      gap:30px;
+    }
 
-nav{
-  flex:1;
+    nav a{
+      font-size:12px;
 
-  display:flex;
+      font-weight:900;
 
-  justify-content:center;
+      text-transform:uppercase;
 
-  gap:30px;
-}
+      white-space:nowrap;
 
-nav a{
-  font-size:12px;
+      transition:.2s;
+    }
 
-  font-weight:900;
+    nav a:hover,
+    nav a:first-child{
+      color:var(--gold);
+    }
 
-  text-transform:uppercase;
+    .social{
+      display:flex;
 
-  white-space:nowrap;
+      gap:14px;
 
-  transition:.2s;
-}
+      font-size:21px;
+    }
 
-nav a:hover,
-nav a:first-child{
-  color:var(--gold);
-}
+    /* =========================
+       HERO
+    ========================= */
 
-.social{
-  display:flex;
+    .hero{
+      background:#090806;
+    }
 
-  gap:14px;
+    .hero-inner{
+      max-width:1180px;
 
-  font-size:21px;
-}
+      margin:auto;
 
+      min-height:500px;
 
+      display:grid;
 
-/* =========================
-   HERO
-========================= */
+      grid-template-columns:
+        40% 60%;
+    }
 
-.hero{
-  background:#090806;
-}
+    .hero-copy{
+      padding:
+        56px 10px
+        48px 28px;
 
-.hero-inner{
-  max-width:1180px;
+      display:flex;
 
-  margin:auto;
+      flex-direction:column;
 
-  min-height:500px;
+      justify-content:center;
 
-  display:grid;
+      align-items:flex-start;
+    }
 
-  grid-template-columns:
-    40% 60%;
-}
+    .script{
+      font-family:Georgia, serif;
 
-.hero-copy{
-  padding:
-    56px 10px
-    48px 28px;
+      font-style:italic;
 
-  display:flex;
+      text-shadow:
+        0 2px 4px #000;
+    }
 
-  flex-direction:column;
+    .kicker{
+      font-size:34px;
 
-  justify-content:center;
+      transform:
+        rotate(-2deg);
+    }
 
-  align-items:flex-start;
-}
+    .hero h1{
+      font-size:82px;
 
-.script{
-  font-family:
-    Georgia, serif;
+      line-height:.84;
 
-  font-style:italic;
+      letter-spacing:-4px;
 
-  text-shadow:
-    0 2px 4px #000;
-}
+      color:var(--gold);
 
-.kicker{
-  font-size:34px;
+      font-weight:950;
 
-  transform:
-    rotate(-2deg);
-}
+      text-transform:uppercase;
+    }
 
-.hero h1{
-  font-size:82px;
+    .sub{
+      font-size:38px;
 
-  line-height:.84;
+      transform:
+        rotate(-3deg);
 
-  letter-spacing:-4px;
+      margin:
+        6px 0 20px;
+    }
 
-  color:var(--gold);
+    .brush{
+      background:var(--gold);
 
-  font-weight:950;
+      color:#060606;
 
-  text-transform:uppercase;
-}
+      font-weight:950;
 
-.sub{
-  font-size:38px;
+      padding:
+        9px 24px;
 
-  transform:
-    rotate(-3deg);
+      margin-bottom:20px;
 
-  margin:
-    6px 0 20px;
-}
+      transform:
+        rotate(-2deg)
+        skew(-6deg);
+    }
 
-.brush{
-  background:var(--gold);
+    .brush span{
+      display:block;
 
-  color:#060606;
+      transform:
+        skew(6deg);
+    }
 
-  font-weight:950;
+    /* =========================
+       BOTONES
+    ========================= */
 
-  padding:
-    9px 24px;
+    .cta{
+      display:inline-flex;
 
-  margin-bottom:20px;
+      align-items:center;
 
-  transform:
-    rotate(-2deg)
-    skew(-6deg);
-}
+      gap:10px;
 
-.brush span{
-  display:block;
+      background:var(--gold);
 
-  transform:
-    skew(6deg);
-}
+      color:#070707;
 
+      padding:
+        14px 25px;
 
-/* =========================
-   BOTÓN
-========================= */
+      border-radius:999px;
 
-.cta{
-  display:inline-flex;
+      font-size:16px;
 
-  align-items:center;
+      font-weight:950;
 
-  gap:10px;
+      box-shadow:
+        0 5px 0
+        rgba(0,0,0,.35);
 
-  background:var(--gold);
+      transition:.2s;
+    }
 
-  color:#070707;
+    .cta:hover{
+      transform:
+        translateY(-2px);
 
-  padding:
-    14px 25px;
+      background:#ffc84f;
+    }
 
-  border-radius:999px;
+    /* =========================
+       IMAGEN HERO
+    ========================= */
 
-  font-size:16px;
+    .hero-image{
+      min-height:500px;
 
-  font-weight:950;
+      position:relative;
 
-  box-shadow:
-    0 5px 0
-    rgba(0,0,0,.35);
+      background:
 
-  transition:.2s;
-}
+        linear-gradient(
+          90deg,
+          #090806 0%,
+          rgba(9,8,6,.55) 8%,
+          rgba(9,8,6,0) 30%
+        ),
 
-.cta:hover{
-  transform:
-    translateY(-2px);
+        url("hero_tortilla.jpg")
+        center / cover
+        no-repeat;
+    }
 
-  background:#ffc84f;
-}
+    .quote{
+      position:absolute;
 
+      right:28px;
 
-/* =========================
-   IMAGEN HERO
-========================= */
+      bottom:55px;
 
-.hero-image{
-  min-height:500px;
+      width:170px;
 
-  position:relative;
+      text-align:center;
 
-  background:
+      font:
+        italic 25px/1.05
+        Georgia,serif;
 
-    linear-gradient(
-      90deg,
-      #090806 0%,
-      rgba(9,8,6,.55) 8%,
-      rgba(9,8,6,0) 30%
-    ),
+      transform:
+        rotate(-7deg);
+    }
 
-    url("hero_tortilla.jpg")
-    center / cover
-    no-repeat;
-}
+    /* =========================
+       BORDE RASGADO
+    ========================= */
 
-.quote{
-  position:absolute;
+    .rip{
+      height:25px;
 
-  right:28px;
+      margin-top:-13px;
 
-  bottom:55px;
+      position:relative;
 
-  width:170px;
+      z-index:2;
 
-  text-align:center;
+      background:#090909;
 
-  font:
-    italic 25px/1.05
-    Georgia,serif;
+      clip-path:polygon(
+        0 40%,
+        4% 65%,
+        8% 42%,
+        12% 68%,
+        16% 44%,
+        20% 63%,
+        24% 40%,
+        28% 66%,
+        32% 44%,
+        36% 68%,
+        40% 42%,
+        44% 61%,
+        48% 40%,
+        52% 66%,
+        56% 43%,
+        60% 61%,
+        64% 39%,
+        68% 68%,
+        72% 43%,
+        76% 62%,
+        80% 40%,
+        84% 67%,
+        88% 45%,
+        92% 62%,
+        96% 40%,
+        100% 64%,
+        100% 100%,
+        0 100%
+      );
+    }
 
-  transform:
-    rotate(-7deg);
-}
+    /* =========================
+       SABORES
+    ========================= */
 
+    .sabores{
+      background:#090909;
 
-/* =========================
-   BORDE RASGADO
-========================= */
+      padding:
+        30px 22px
+        38px;
+    }
 
-.rip{
-  height:25px;
+    .section-head{
+      text-align:center;
 
-  margin-top:-13px;
+      margin-bottom:20px;
+    }
 
-  position:relative;
+    .section-head h2{
+      font-size:40px;
 
-  z-index:2;
+      font-weight:950;
 
-  background:#090909;
+      text-transform:uppercase;
+    }
 
-  clip-path:polygon(
-    0 40%,
-    4% 65%,
-    8% 42%,
-    12% 68%,
-    16% 44%,
-    20% 63%,
-    24% 40%,
-    28% 66%,
-    32% 44%,
-    36% 68%,
-    40% 42%,
-    44% 61%,
-    48% 40%,
-    52% 66%,
-    56% 43%,
-    60% 61%,
-    64% 39%,
-    68% 68%,
-    72% 43%,
-    76% 62%,
-    80% 40%,
-    84% 67%,
-    88% 45%,
-    92% 62%,
-    96% 40%,
-    100% 64%,
-    100% 100%,
-    0 100%
-  );
-}
+    .section-head h2:before,
+    .section-head h2:after{
+      content:"✦";
 
+      color:var(--gold);
 
+      font-size:27px;
 
-/* =========================
-   SABORES
-========================= */
+      margin:
+        0 12px;
+    }
 
-.sabores{
-  background:#090909;
+    .section-head p{
+      margin-top:8px;
 
-  padding:
-    30px 22px
-    38px;
-}
+      color:#dacdab;
 
-.section-head{
-  text-align:center;
+      font-size:11px;
 
-  margin-bottom:20px;
-}
+      letter-spacing:4px;
 
-.section-head h2{
-  font-size:40px;
+      text-transform:uppercase;
+    }
 
-  font-weight:950;
+    .rule{
+      width:520px;
 
-  text-transform:uppercase;
-}
+      max-width:74vw;
 
-.section-head h2:before,
-.section-head h2:after{
-  content:"✦";
+      height:1px;
 
-  color:var(--gold);
+      margin:
+        10px auto 0;
 
-  font-size:27px;
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          #ad7b2f,
+          transparent
+        );
+    }
 
-  margin:
-    0 12px;
-}
+    /* =========================
+       TARJETAS SABORES
+    ========================= */
 
-.section-head p{
-  margin-top:8px;
+    .grid{
+      max-width:1180px;
 
-  color:#dacdab;
+      margin:auto;
 
-  font-size:11px;
+      display:grid;
 
-  letter-spacing:4px;
+      grid-template-columns:
+        repeat(4,1fr);
 
-  text-transform:uppercase;
-}
+      gap:13px;
+    }
 
-.rule{
-  width:520px;
+    .card{
+      overflow:hidden;
 
-  max-width:74vw;
+      background:#12100c;
 
-  height:1px;
+      border:
+        1px solid #775726;
 
-  margin:
-    10px auto 0;
+      border-radius:7px;
 
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      #ad7b2f,
-      transparent
-    );
-}
+      box-shadow:
+        0 8px 22px
+        rgba(0,0,0,.3);
+    }
 
+    .card img{
+      width:100%;
 
+      height:160px;
 
-/* =========================
-   TARJETAS SABORES
-========================= */
+      object-fit:cover;
 
-.grid{
-  max-width:1180px;
+      object-position:center;
+    }
 
-  margin:auto;
+    .card-info{
+      min-height:76px;
 
-  display:grid;
+      padding:
+        8px 6px 10px;
 
-  grid-template-columns:
-    repeat(4,1fr);
+      text-align:center;
 
-  gap:13px;
-}
+      display:flex;
 
-.card{
-  overflow:hidden;
+      flex-direction:column;
 
-  background:#12100c;
+      justify-content:center;
 
-  border:
-    1px solid #775726;
+      background:
+        linear-gradient(
+          #17140f,
+          #0b0a08
+        );
+    }
 
-  border-radius:7px;
+    .card h3{
+      font-size:22px;
 
-  box-shadow:
-    0 8px 22px
-    rgba(0,0,0,.3);
-}
+      line-height:1;
 
-.card img{
-  width:100%;
+      font-weight:950;
 
-  height:160px;
+      text-transform:uppercase;
+    }
 
-  object-fit:cover;
+    .card p{
+      margin-top:4px;
 
-  object-position:center;
-}
+      color:var(--gold);
 
-.card-info{
-  min-height:76px;
+      font:
+        italic 14px
+        Georgia,serif;
+    }
 
-  padding:
-    8px 6px 10px;
+    .phrase{
+      display:flex;
 
-  text-align:center;
+      align-items:center;
 
-  display:flex;
+      justify-content:center;
 
-  flex-direction:column;
+      text-align:center;
 
-  justify-content:center;
+      font:
+        italic 31px/1.05
+        Georgia,serif;
 
-  background:
-    linear-gradient(
-      #17140f,
-      #0b0a08
-    );
-}
+      transform:
+        rotate(-5deg);
 
-.card h3{
-  font-size:22px;
+      padding:20px;
+    }
 
-  line-height:1;
+    /* =========================
+       CONGELADAS
+    ========================= */
 
-  font-weight:950;
+    .congeladas{
+      background:
 
-  text-transform:uppercase;
-}
+        radial-gradient(
+          circle at center,
+          #20160d,
+          #080808 65%
+        );
 
-.card p{
-  margin-top:4px;
+      padding:
+        55px 20px
+        65px;
 
-  color:var(--gold);
+      text-align:center;
+    }
 
-  font:
-    italic 14px
-    Georgia,serif;
-}
+    .congeladas-head{
+      margin-bottom:30px;
+    }
 
-.phrase{
-  display:flex;
+    .congeladas-head h2{
+      color:var(--gold);
 
-  align-items:center;
+      font-size:
+        clamp(
+          30px,
+          5vw,
+          44px
+        );
 
-  justify-content:center;
+      font-weight:950;
 
-  text-align:center;
+      text-transform:uppercase;
 
-  font:
-    italic 31px/1.05
-    Georgia,serif;
+      margin-bottom:8px;
+    }
 
-  transform:
-    rotate(-5deg);
+    .congeladas-head p{
+      color:#d7c9ab;
 
-  padding:20px;
-}
+      font-size:13px;
 
+      letter-spacing:2px;
 
+      text-transform:uppercase;
+    }
 
-/* =========================
-   TORTILLAS CONGELADAS
-========================= */
+    .congeladas-container{
+      max-width:760px;
 
-.congeladas{
-  background:
+      margin:auto;
+    }
 
-    radial-gradient(
-      circle at center,
-      #20160d,
-      #080808 65%
-    );
+    .congeladas-foto{
+      background:#111;
 
-  padding:
-    55px 20px
-    65px;
+      padding:8px;
 
-  text-align:center;
-}
+      border:
+        1px solid #725225;
 
-.congeladas-head{
-  margin-bottom:30px;
-}
+      border-radius:15px;
 
-.congeladas-head h2{
-  color:var(--gold);
+      box-shadow:
+        0 15px 40px
+        rgba(0,0,0,.5);
+    }
 
-  font-size:
-    clamp(
-      30px,
-      5vw,
-      44px
-    );
+    .congeladas-foto img{
+      width:100%;
 
-  font-weight:950;
+      border-radius:10px;
+    }
 
-  text-transform:uppercase;
+    .congeladas-texto{
+      margin-top:25px;
 
-  margin-bottom:8px;
-}
+      color:#ddd;
 
-.congeladas-head p{
-  color:#d7c9ab;
+      font-size:15px;
 
-  font-size:13px;
+      line-height:1.6;
+    }
 
-  letter-spacing:2px;
+    .congeladas-texto strong{
+      color:var(--gold);
+    }
 
-  text-transform:uppercase;
-}
+    .congeladas .cta{
+      margin-top:20px;
+    }
 
-.congeladas-container{
-  max-width:760px;
+    /* =========================
+       INFORMACIÓN
+    ========================= */
 
-  margin:auto;
-}
+    .info{
+      background:var(--cream);
 
-.congeladas-foto{
-  background:#111;
+      color:#111;
 
-  padding:8px;
+      padding:
+        30px 22px;
+    }
 
-  border:
-    1px solid #725225;
+    .info-inner{
+      max-width:1250px;
 
-  border-radius:15px;
+      margin:auto;
 
-  box-shadow:
-    0 15px 40px
-    rgba(0,0,0,.5);
-}
+      display:grid;
 
-.congeladas-foto img{
-  width:100%;
+      grid-template-columns:
+        repeat(5,1fr);
 
-  border-radius:10px;
-}
+      gap:20px;
+    }
 
-.congeladas-texto{
-  margin-top:25px;
+    .info-item{
+      display:grid;
 
-  color:#ddd;
+      grid-template-columns:
+        45px 1fr;
 
-  font-size:15px;
+      gap:9px;
 
-  line-height:1.6;
-}
+      align-items:center;
+    }
 
-.congeladas-texto strong{
-  color:var(--gold);
-}
+    .info-icon{
+      font-size:34px;
 
-.congeladas .cta{
-  margin-top:20px;
-}
+      text-align:center;
 
+      filter:grayscale(1);
+    }
 
+    .info h4{
+      font-size:13px;
 
-/* =========================
-   FRANJA DE INFORMACIÓN
-========================= */
+      font-weight:950;
 
-.info{
-  background:var(--cream);
+      text-transform:uppercase;
 
-  color:#111;
+      margin-bottom:3px;
+    }
 
-  padding:
-    30px 22px;
-}
+    .info p{
+      font-size:11px;
 
-.info-inner{
-  max-width:1250px;
+      line-height:1.3;
+    }
 
-  margin:auto;
+    .envio-gratis strong{
+      color:#9b5b00;
+    }
 
-  display:grid;
+    /* =========================
+       FOOTER FOTO
+    ========================= */
 
-  grid-template-columns:
-    repeat(5,1fr);
+    .footer-visual{
+      position:relative;
 
-  gap:20px;
-}
+      background:#050505;
 
-.info-item{
-  display:grid;
+      overflow:hidden;
+    }
 
-  grid-template-columns:
-    45px 1fr;
+    .footer-visual img{
+      width:100%;
 
-  gap:9px;
+      height:auto;
+    }
 
-  align-items:center;
-}
+    /* tapa el whatsapp que viene dibujado en la imagen */
+    .tapa-whatsapp{
+      position:absolute;
 
-.info-icon{
-  font-size:34px;
+      right:0;
 
-  text-align:center;
+      bottom:0;
 
-  filter:grayscale(1);
-}
+      width:10%;
 
-.info h4{
-  font-size:13px;
+      height:38%;
 
-  font-weight:950;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,0),
+          rgba(0,0,0,.95) 45%,
+          #050505
+        );
 
-  text-transform:uppercase;
+      pointer-events:none;
+    }
 
-  margin-bottom:3px;
-}
+    /* botón amarillo de la imagen clickeable */
+    .footer-hotspot{
+      position:absolute;
 
-.info p{
-  font-size:11px;
+      left:72%;
 
-  line-height:1.3;
-}
+      top:36%;
 
+      width:23%;
 
-/* ENVÍO DESTACADO */
+      height:24%;
 
-.envio-gratis{
-  color:#111;
-}
+      border-radius:999px;
 
-.envio-gratis strong{
-  color:#9b5b00;
-}
+      z-index:3;
 
+      cursor:pointer;
+    }
 
+    .footer-hotspot:focus-visible{
+      outline:
+        3px solid #fff;
 
-/* =========================
-   FOOTER CON IMAGEN
-========================= */
+      outline-offset:3px;
+    }
 
-.footer-visual{
-  position:relative;
+    /* =========================
+       FOOTER NEGRO
+    ========================= */
 
-  background:#050505;
+    .bottom{
+      background:#050505;
 
-  overflow:hidden;
-}
+      border-top:
+        1px solid
+        rgba(255,255,255,.08);
 
-.footer-visual img{
-  width:100%;
+      padding:
+        14px 22px;
 
-  height:auto;
-}
+      color:#aaa;
 
+      font-size:11px;
+    }
 
-/*
-Oculta el WhatsApp que ya viene
-dibujado dentro de footer_pampa.jpg.
-*/
+    .bottom-inner{
+      max-width:1180px;
 
-.tapa-whatsapp{
-  position:absolute;
+      margin:auto;
 
-  right:0;
+      display:flex;
 
-  bottom:0;
+      justify-content:
+        space-between;
 
-  width:9%;
+      gap:20px;
+    }
 
-  height:35%;
+    /* =========================
+       WHATSAPP FLOTANTE
+    ========================= */
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,0),
-      rgba(0,0,0,.95) 45%,
-      #050505
-    );
+    .whatsapp{
+      position:fixed;
 
-  pointer-events:none;
-}
+      right:20px;
 
+      bottom:20px;
 
-/*
-Hace clickeable el botón amarillo
-"HACÉ TU PEDIDO" de la imagen.
-*/
+      width:62px;
 
-.footer-hotspot{
-  position:absolute;
+      height:62px;
 
-  left:72%;
+      border-radius:50%;
 
-  top:36%;
+      background:#25d366;
 
-  width:23%;
+      display:flex;
 
-  height:24%;
+      align-items:center;
 
-  border-radius:999px;
+      justify-content:center;
 
-  z-index:3;
+      z-index:1200;
 
-  cursor:pointer;
-}
+      box-shadow:
+        0 7px 20px
+        rgba(0,0,0,.45);
 
-.footer-hotspot:focus-visible{
-  outline:
-    3px solid #fff;
+      transition:.2s;
+    }
 
-  outline-offset:3px;
-}
+    .whatsapp:hover{
+      transform:scale(1.08);
+    }
 
+    .whatsapp svg{
+      width:38px;
 
+      height:38px;
+    }
 
-/* =========================
-   FOOTER NEGRO
-========================= */
+    /* =========================
+       TABLET
+    ========================= */
 
-.bottom{
-  background:#050505;
+    @media(max-width:1000px){
 
-  border-top:
-    1px solid
-    rgba(255,255,255,.08);
+      .info-inner{
+        grid-template-columns:
+          repeat(3,1fr);
+      }
 
-  padding:
-    14px 22px;
+    }
 
-  color:#aaa;
+    @media(max-width:900px){
 
-  font-size:11px;
-}
+      .header-inner{
+        gap:16px;
 
-.bottom-inner{
-  max-width:1180px;
+        padding:
+          7px 14px;
+      }
 
-  margin:auto;
+      .logo{
+        width:105px;
+      }
 
-  display:flex;
+      .logo img{
+        height:78px;
+      }
 
-  justify-content:
-    space-between;
+      nav{
+        gap:16px;
+      }
 
-  gap:20px;
-}
+      nav a{
+        font-size:10px;
+      }
 
+      .social{
+        display:none;
+      }
 
+      .hero-inner{
+        grid-template-columns:
+          45% 55%;
+      }
 
-/* =========================
-   WHATSAPP FLOTANTE
-========================= */
+      .hero h1{
+        font-size:60px;
+      }
 
-.whatsapp{
-  position:fixed;
+      .kicker{
+        font-size:25px;
+      }
 
-  right:20px;
+      .sub{
+        font-size:29px;
+      }
 
-  bottom:20px;
+      .grid{
+        grid-template-columns:
+          repeat(3,1fr);
+      }
 
-  width:62px;
+      .phrase{
+        display:none;
+      }
 
-  height:62px;
+    }
 
-  border-radius:50%;
+    /* =========================
+       CELULAR
+    ========================= */
 
-  background:#25d366;
+    @media(max-width:650px){
 
-  display:flex;
+      header{
+        position:relative;
+      }
 
-  align-items:center;
+      .header-inner{
+        flex-direction:column;
 
-  justify-content:center;
+        gap:4px;
 
-  z-index:1200;
+        padding:
+          8px 10px 10px;
+      }
 
-  box-shadow:
-    0 7px 20px
-    rgba(0,0,0,.45);
+      .logo{
+        width:95px;
+      }
 
-  transition:.2s;
-}
+      .logo img{
+        height:75px;
+      }
 
-.whatsapp:hover{
-  transform:
-    scale(1.08);
-}
+      nav{
+        width:100%;
 
+        justify-content:flex-start;
 
-/* LOGO WHATSAPP HECHO EN CSS */
+        overflow-x:auto;
 
-.whatsapp-icon{
-  width:31px;
+        gap:18px;
 
-  height:31px;
+        scrollbar-width:none;
 
-  border:
-    3px solid white;
+        padding:
+          4px 2px;
+      }
 
-  border-radius:50%;
+      nav::-webkit-scrollbar{
+        display:none;
+      }
 
-  position:relative;
-}
+      nav a{
+        font-size:9px;
 
-.whatsapp-icon::after{
-  content:"";
+        flex:0 0 auto;
+      }
 
-  position:absolute;
+      /* HERO */
 
-  width:9px;
+      .hero-inner{
+        grid-template-columns:1fr;
+      }
 
-  height:9px;
+      .hero-copy{
+        min-height:455px;
 
-  border-left:
-    3px solid white;
+        padding:
+          42px 20px 32px;
 
-  border-bottom:
-    3px solid white;
+        align-items:center;
 
-  left:-4px;
+        text-align:center;
 
-  bottom:-3px;
+        background:
 
-  transform:
-    rotate(-20deg);
-}
+          linear-gradient(
+            rgba(5,5,5,.50),
+            rgba(5,5,5,.88)
+          ),
 
-.whatsapp-icon::before{
-  content:"☎";
+          url("hero_tortilla.jpg")
+          center / cover
+          no-repeat;
+      }
 
-  color:white;
+      .hero-image{
+        display:none;
+      }
 
-  font-size:19px;
+      .kicker{
+        font-size:28px;
+      }
 
-  font-weight:bold;
+      .hero h1{
+        font-size:62px;
+      }
 
-  position:absolute;
+      .sub{
+        font-size:30px;
+      }
 
-  left:4px;
+      .brush{
+        font-size:14px;
+      }
 
-  top:2px;
+      .cta{
+        font-size:15px;
 
-  transform:
-    rotate(-18deg);
-}
+        padding:
+          13px 22px;
+      }
 
+      /* SABORES */
 
+      .sabores{
+        padding:
+          25px 11px
+          30px;
+      }
 
-/* =========================
-   TABLET
-========================= */
+      .section-head h2{
+        font-size:28px;
+      }
 
-@media(max-width:1000px){
+      .section-head h2:before,
+      .section-head h2:after{
+        font-size:18px;
 
-  .info-inner{
-    grid-template-columns:
-      repeat(3,1fr);
-  }
+        margin:0 5px;
+      }
 
-}
+      .section-head p{
+        font-size:8px;
 
+        letter-spacing:2.4px;
+      }
 
-@media(max-width:900px){
+      .grid{
+        grid-template-columns:
+          repeat(2,1fr);
 
-  .header-inner{
-    gap:16px;
+        gap:9px;
+      }
 
-    padding:
-      7px 14px;
-  }
+      .card img{
+        height:118px;
+      }
 
-  .logo{
-    width:105px;
-  }
+      .card-info{
+        min-height:63px;
+      }
 
-  .logo img{
-    height:78px;
-  }
+      .card h3{
+        font-size:16px;
+      }
 
-  nav{
-    gap:16px;
-  }
+      .card p{
+        font-size:11px;
+      }
 
-  nav a{
-    font-size:10px;
-  }
+      .phrase{
+        display:flex;
 
-  .social{
-    display:none;
-  }
+        min-height:181px;
 
-  .hero-inner{
-    grid-template-columns:
-      45% 55%;
-  }
+        font-size:22px;
+      }
 
-  .hero h1{
-    font-size:60px;
-  }
+      /* CONGELADAS */
 
-  .kicker{
-    font-size:25px;
-  }
+      .congeladas{
+        padding:
+          45px 12px
+          50px;
+      }
 
-  .sub{
-    font-size:29px;
-  }
+      .congeladas-head h2{
+        font-size:29px;
+      }
 
-  .grid{
-    grid-template-columns:
-      repeat(3,1fr);
-  }
+      .congeladas-head p{
+        font-size:10px;
+      }
 
-  .phrase{
-    display:none;
-  }
+      .congeladas-container{
+        max-width:450px;
+      }
 
-}
+      /* INFO */
 
+      .info{
+        padding:
+          25px 15px;
+      }
 
+      .info-inner{
+        grid-template-columns:1fr;
 
-/* =========================
-   CELULAR
-========================= */
+        gap:20px;
+      }
 
-@media(max-width:650px){
+      .info-item{
+        grid-template-columns:
+          45px 1fr;
+      }
 
-  header{
-    position:relative;
-  }
+      .info h4{
+        font-size:13px;
+      }
 
-  .header-inner{
-    flex-direction:column;
+      .info p{
+        font-size:12px;
+      }
 
-    gap:4px;
+      /* FOOTER */
 
-    padding:
-      8px 10px 10px;
-  }
+      .footer-visual{
+        min-height:230px;
 
-  .logo{
-    width:95px;
-  }
+        background:
+          url("footer_pampa.jpg")
+          center / cover
+          no-repeat;
+      }
 
-  .logo img{
-    height:75px;
-  }
+      .footer-visual img{
+        display:none;
+      }
 
-  nav{
-    width:100%;
+      .footer-hotspot{
+        left:58%;
 
-    justify-content:flex-start;
+        top:56%;
 
-    overflow-x:auto;
+        width:36%;
 
-    gap:18px;
+        height:20%;
+      }
 
-    scrollbar-width:none;
+      .tapa-whatsapp{
+        width:17%;
 
-    padding:
-      4px 2px;
-  }
+        height:40%;
+      }
 
-  nav::-webkit-scrollbar{
-    display:none;
-  }
+      .bottom-inner{
+        flex-direction:column;
 
-  nav a{
-    font-size:9px;
+        text-align:center;
 
-    flex:0 0 auto;
-  }
+        align-items:center;
+      }
 
+      .whatsapp{
+        width:58px;
 
-  /* HERO */
+        height:58px;
 
-  .hero-inner{
-    grid-template-columns:1fr;
-  }
+        right:16px;
 
-  .hero-copy{
-    min-height:455px;
+        bottom:16px;
+      }
 
-    padding:
-      42px 20px 32px;
+      .whatsapp svg{
+        width:35px;
 
-    align-items:center;
+        height:35px;
+      }
 
-    text-align:center;
+    }
 
-    background:
+    @media(max-width:380px){
 
-      linear-gradient(
-        rgba(5,5,5,.50),
-        rgba(5,5,5,.88)
-      ),
+      .hero h1{
+        font-size:51px;
+      }
 
-      url("hero_tortilla.jpg")
-      center / cover
-      no-repeat;
-  }
+      .section-head h2{
+        font-size:24px;
+      }
 
-  .hero-image{
-    display:none;
-  }
+      .card h3{
+        font-size:14px;
+      }
 
-  .kicker{
-    font-size:28px;
-  }
+    }
 
-  .hero h1{
-    font-size:62px;
-  }
-
-  .sub{
-    font-size:30px;
-  }
-
-  .brush{
-    font-size:14px;
-  }
-
-  .cta{
-    font-size:15px;
-
-    padding:
-      13px 22px;
-  }
-
-
-  /* SABORES */
-
-  .sabores{
-    padding:
-      25px 11px
-      30px;
-  }
-
-  .section-head h2{
-    font-size:28px;
-  }
-
-  .section-head h2:before,
-  .section-head h2:after{
-    font-size:18px;
-
-    margin:0 5px;
-  }
-
-  .section-head p{
-    font-size:8px;
-
-    letter-spacing:2.4px;
-  }
-
-  .grid{
-    grid-template-columns:
-      repeat(2,1fr);
-
-    gap:9px;
-  }
-
-  .card img{
-    height:118px;
-  }
-
-  .card-info{
-    min-height:63px;
-  }
-
-  .card h3{
-    font-size:16px;
-  }
-
-  .card p{
-    font-size:11px;
-  }
-
-  .phrase{
-    display:flex;
-
-    min-height:181px;
-
-    font-size:22px;
-  }
-
-
-  /* CONGELADAS */
-
-  .congeladas{
-    padding:
-      45px 12px
-      50px;
-  }
-
-  .congeladas-head h2{
-    font-size:29px;
-  }
-
-  .congeladas-head p{
-    font-size:10px;
-  }
-
-  .congeladas-container{
-    max-width:450px;
-  }
-
-
-  /* INFORMACIÓN */
-
-  .info{
-    padding:
-      25px 15px;
-  }
-
-  .info-inner{
-    grid-template-columns:1fr;
-
-    gap:20px;
-  }
-
-  .info-item{
-    grid-template-columns:
-      45px 1fr;
-  }
-
-  .info h4{
-    font-size:13px;
-  }
-
-  .info p{
-    font-size:12px;
-  }
-
-
-  /* FOOTER */
-
-  .footer-visual{
-    min-height:230px;
-
-    background:
-      url("footer_pampa.jpg")
-      center / cover
-      no-repeat;
-  }
-
-  .footer-visual img{
-    display:none;
-  }
-
-  .footer-hotspot{
-    left:58%;
-
-    top:56%;
-
-    width:36%;
-
-    height:20%;
-  }
-
-  .tapa-whatsapp{
-    width:15%;
-
-    height:35%;
-  }
-
-  .bottom-inner{
-    flex-direction:column;
-
-    text-align:center;
-
-    align-items:center;
-  }
-
-}
-
-
-/* CELULAR CHICO */
-
-@media(max-width:380px){
-
-  .hero h1{
-    font-size:51px;
-  }
-
-  .section-head h2{
-    font-size:24px;
-  }
-
-  .card h3{
-    font-size:14px;
-  }
-
-}
-
-</style>
+  </style>
 </head>
-
 
 <body>
 
+  <!-- =========================
+       HEADER
+  ========================= -->
 
-<!-- =========================
-     HEADER
-========================= -->
+  <header>
 
-<header>
+    <div class="header-inner">
 
-  <div class="header-inner">
+      <a
+        class="logo"
+        href="#inicio"
+      >
 
-    <a
-      class="logo"
-      href="#inicio"
+        <img
+          src="logo_nuevo.jpg.png"
+          alt="Las Tortillas del Gaucho"
+        >
+
+      </a>
+
+      <nav>
+
+        <a href="#inicio">
+          Inicio
+        </a>
+
+        <a href="#sabores">
+          Nuestros sabores
+        </a>
+
+        <a href="#congeladas">
+          Congeladas
+        </a>
+
+        <a href="#ubicacion">
+          Ubicación
+        </a>
+
+        <a href="#horarios">
+          Horarios
+        </a>
+
+        <a href="#contacto">
+          Contacto
+        </a>
+
+      </nav>
+
+      <div class="social">
+
+        <span>◎</span>
+
+        <span>♪</span>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section
+      class="hero"
+      id="inicio"
+    >
+
+      <div class="hero-inner">
+
+        <div class="hero-copy">
+
+          <div class="kicker script">
+
+            Llevamos la clásica
+
+          </div>
+
+          <h1>
+
+            TORTILLA
+
+          </h1>
+
+          <div class="sub script">
+
+            a otro nivel
+
+          </div>
+
+          <div class="brush">
+
+            <span>
+              SABORES QUE ENAMORAN
+            </span>
+
+          </div>
+
+          <a
+            class="cta"
+            href="https://wa.me/5491157979932?text=Hola%2C%20quiero%20hacer%20un%20pedido%20de%20tortillas"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            ☎ HACÉ TU PEDIDO ›
+
+          </a>
+
+        </div>
+
+        <div class="hero-image">
+
+          <div class="quote">
+
+            Más que
+            <br>
+            tortilla,
+            <br>
+            una tradición
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <div class="rip"></div>
+
+    <!-- =========================
+         SABORES
+    ========================= -->
+
+    <section
+      class="sabores"
+      id="sabores"
+    >
+
+      <div class="section-head">
+
+        <h2>
+          Nuestros Sabores
+        </h2>
+
+        <p>
+          Tortillas caseras,
+          bien argentinas
+        </p>
+
+        <div class="rule"></div>
+
+      </div>
+
+      <div class="grid">
+
+        <article class="card">
+
+          <img
+            src="roquefort.jpg"
+            alt="Roquefort y muzza"
+          >
+
+          <div class="card-info">
+
+            <h3>
+              Roquefort
+            </h3>
+
+            <p>
+              y muzza
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="card">
+
+          <img
+            src="provoleta.jpg"
+            alt="Provoleta"
+          >
+
+          <div class="card-info">
+
+            <h3>
+              Provoleta
+            </h3>
+
+            <p>
+              con jamón y queso
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="card">
+
+          <img
+            src="caprese.jpg"
+            alt="Caprese"
+          >
+
+          <div class="card-info">
+
+            <h3>
+              Caprese 🌿
+            </h3>
+
+          </div>
+
+        </article>
+
+        <article class="card">
+
+          <img
+            src="fugazzeta.jpg"
+            alt="Fugazzeta"
+          >
+
+          <div class="card-info">
+
+            <h3>
+              Fugazzeta 🧅
+            </h3>
+
+          </div>
+
+        </article>
+
+        <article class="card">
+
+          <img
+            src="jamon_queso.jpg"
+            alt="Jamón y queso"
+          >
+
+          <div class="card-info">
+
+            <h3>
+              Jamón
+            </h3>
+
+            <p>
+              y queso
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="card">
+
+          <img
+            src="jamon_muzza_morron.jpg"
+            alt="Jamón, muzza y morrón"
+          >
+
+          <div class="card-info">
+
+            <h3>
+              Jamón, Muzza
+            </h3>
+
+            <p>
+              y morrón 🌶️
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="card">
+
+          <img
+            src="huevo.jpg"
+            alt="Huevo"
+          >
+
+          <div class="card-info">
+
+            <h3>
+              Huevo 🥚
+            </h3>
+
+            <p>
+              con jamón y queso
+            </p>
+
+          </div>
+
+        </article>
+
+        <div class="phrase">
+
+          Tortillas
+          <br>
+          rellenas de
+          <br>
+          sabor
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         CONGELADAS
+    ========================= -->
+
+    <section
+      class="congeladas"
+      id="congeladas"
+    >
+
+      <div class="congeladas-head">
+
+        <h2>
+          Tortillas Congeladas
+        </h2>
+
+        <p>
+          El mismo sabor,
+          listo para cuando quieras
+        </p>
+
+      </div>
+
+      <div class="congeladas-container">
+
+        <div class="congeladas-foto">
+
+          <img
+            src="tortillas_congeladas.jpg"
+            alt="Tortillas congeladas Las Tortillas del Gaucho"
+          >
+
+        </div>
+
+        <div class="congeladas-texto">
+
+          <p>
+
+            Ideales para tener siempre listas en casa.
+
+            <strong>
+              Pedí tus tortillas congeladas
+            </strong>
+
+            y disfrutalas cuando quieras.
+
+          </p>
+
+        </div>
+
+        <a
+          class="cta"
+          href="https://wa.me/5491157979932?text=Hola%2C%20quiero%20consultar%20por%20las%20tortillas%20congeladas"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          ☎ PEDIR CONGELADAS
+
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         INFORMACIÓN
+    ========================= -->
+
+    <section
+      class="info"
+      id="ubicacion"
+    >
+
+      <div class="info-inner">
+
+        <div class="info-item">
+
+          <div class="info-icon">
+            📍
+          </div>
+
+          <div>
+
+            <h4>
+              Nos encontrás en
+            </h4>
+
+            <p>
+              San Ignacio y Av. Gaona
+              <br>
+              Ciudadela
+            </p>
+
+          </div>
+
+        </div>
+
+        <div
+          class="info-item"
+          id="horarios"
+        >
+
+          <div class="info-icon">
+            ◷
+          </div>
+
+          <div>
+
+            <h4>
+              Nuestros horarios
+            </h4>
+
+            <p>
+              Todos los días
+              <br>
+              6:00 a 19:00 hs
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="info-item">
+
+          <div class="info-icon">
+            🛵
+          </div>
+
+          <div>
+
+            <h4>
+              Envíos a domicilio
+            </h4>
+
+            <p class="envio-gratis">
+
+              Hasta
+
+              <strong>
+                3 km GRATIS
+              </strong>
+
+              <br>
+
+              Más de 3 km:
+              costo según distancia
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="info-item">
+
+          <div class="info-icon">
+            💬
+          </div>
+
+          <div>
+
+            <h4>
+              Pedí por WhatsApp
+            </h4>
+
+            <p>
+              Rápido, fácil
+              <br>
+              y sin vueltas
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="info-item">
+
+          <div class="info-icon">
+            ★
+          </div>
+
+          <div>
+
+            <h4>
+              Calidad y buen sabor
+            </h4>
+
+            <p>
+              La clásica tortilla
+              <br>
+              como tiene que ser
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         FOTO FINAL
+    ========================= -->
+
+    <section
+      class="footer-visual"
+      id="contacto"
     >
 
       <img
-        src="logo_nuevo.jpg"
+        src="footer_pampa.jpg"
         alt="Las Tortillas del Gaucho"
       >
 
-    </a>
-
-
-    <nav>
-
-      <a href="#inicio">
-        Inicio
-      </a>
-
-      <a href="#sabores">
-        Nuestros sabores
-      </a>
-
-      <a href="#congeladas">
-        Congeladas
-      </a>
-
-      <a href="#ubicacion">
-        Ubicación
-      </a>
-
-      <a href="#horarios">
-        Horarios
-      </a>
-
-      <a href="#contacto">
-        Contacto
-      </a>
-
-    </nav>
-
-
-    <div class="social">
-
-      <span>◎</span>
-
-      <span>♪</span>
-
-    </div>
-
-  </div>
-
-</header>
-
-
-
-<main>
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section
-  class="hero"
-  id="inicio"
->
-
-  <div class="hero-inner">
-
-
-    <div class="hero-copy">
-
-      <div class="kicker script">
-
-        Llevamos la clásica
-
-      </div>
-
-
-      <h1>
-        TORTILLA
-      </h1>
-
-
-      <div class="sub script">
-
-        a otro nivel
-
-      </div>
-
-
-      <div class="brush">
-
-        <span>
-          SABORES QUE ENAMORAN
-        </span>
-
-      </div>
-
-
       <a
-        class="cta"
+        class="footer-hotspot"
         href="https://wa.me/5491157979932?text=Hola%2C%20quiero%20hacer%20un%20pedido%20de%20tortillas"
         target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Hacé tu pedido"
       >
-
-        ☎ HACÉ TU PEDIDO ›
-
       </a>
 
-    </div>
+      <div class="tapa-whatsapp"></div>
 
+    </section>
 
-    <div class="hero-image">
+  </main>
 
-      <div class="quote">
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
-        Más que
-        <br>
-        tortilla,
-        <br>
-        una tradición
+  <footer class="bottom">
 
-      </div>
+    <div class="bottom-inner">
 
-    </div>
+      <span>
 
+        © 2026
+        Las Tortillas del Gaucho
+        | Ciudadela,
+        Buenos Aires
 
-  </div>
+      </span>
 
-</section>
+      <span>
 
+        Seguinos en
+        &nbsp; ◎ &nbsp; ♪
 
-<div class="rip"></div>
-
-
-
-<!-- =========================
-     SABORES
-========================= -->
-
-<section
-  class="sabores"
-  id="sabores"
->
-
-  <div class="section-head">
-
-    <h2>
-      Nuestros Sabores
-    </h2>
-
-    <p>
-      Tortillas caseras,
-      bien argentinas
-    </p>
-
-    <div class="rule"></div>
-
-  </div>
-
-
-  <div class="grid">
-
-
-    <article class="card">
-
-      <img
-        src="roquefort.jpg"
-        alt="Roquefort y muzza"
-      >
-
-      <div class="card-info">
-
-        <h3>
-          Roquefort
-        </h3>
-
-        <p>
-          y muzza
-        </p>
-
-      </div>
-
-    </article>
-
-
-
-    <article class="card">
-
-      <img
-        src="provoleta.jpg"
-        alt="Provoleta"
-      >
-
-      <div class="card-info">
-
-        <h3>
-          Provoleta
-        </h3>
-
-        <p>
-          con jamón y queso
-        </p>
-
-      </div>
-
-    </article>
-
-
-
-    <article class="card">
-
-      <img
-        src="caprese.jpg"
-        alt="Caprese"
-      >
-
-      <div class="card-info">
-
-        <h3>
-          Caprese 🌿
-        </h3>
-
-      </div>
-
-    </article>
-
-
-
-    <article class="card">
-
-      <img
-        src="fugazzeta.jpg"
-        alt="Fugazzeta"
-      >
-
-      <div class="card-info">
-
-        <h3>
-          Fugazzeta 🧅
-        </h3>
-
-      </div>
-
-    </article>
-
-
-
-    <article class="card">
-
-      <img
-        src="jamon_queso.jpg"
-        alt="Jamón y queso"
-      >
-
-      <div class="card-info">
-
-        <h3>
-          Jamón
-        </h3>
-
-        <p>
-          y queso
-        </p>
-
-      </div>
-
-    </article>
-
-
-
-    <article class="card">
-
-      <img
-        src="jamon_muzza_morron.jpg"
-        alt="Jamón, muzza y morrón"
-      >
-
-      <div class="card-info">
-
-        <h3>
-          Jamón, Muzza
-        </h3>
-
-        <p>
-          y morrón 🌶️
-        </p>
-
-      </div>
-
-    </article>
-
-
-
-    <article class="card">
-
-      <img
-        src="huevo.jpg"
-        alt="Huevo"
-      >
-
-      <div class="card-info">
-
-        <h3>
-          Huevo 🥚
-        </h3>
-
-        <p>
-          con jamón y queso
-        </p>
-
-      </div>
-
-    </article>
-
-
-
-    <div class="phrase">
-
-      Tortillas
-      <br>
-      rellenas de
-      <br>
-      sabor
+      </span>
 
     </div>
 
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     TORTILLAS CONGELADAS
-========================= -->
-
-<section
-  class="congeladas"
-  id="congeladas"
->
-
-  <div class="congeladas-head">
-
-    <h2>
-      Tortillas Congeladas
-    </h2>
-
-    <p>
-      El mismo sabor,
-      listo para cuando quieras
-    </p>
-
-  </div>
-
-
-  <div class="congeladas-container">
-
-
-    <div class="congeladas-foto">
-
-      <img
-        src="tortillas_congeladas.jpg"
-        alt="Tortillas congeladas Las Tortillas del Gaucho"
-      >
-
-    </div>
-
-
-    <div class="congeladas-texto">
-
-      <p>
-        Ideales para tener siempre listas en casa.
-        <strong>
-          Pedí tus tortillas congeladas
-        </strong>
-        y disfrutalas cuando quieras.
-      </p>
-
-    </div>
-
-
-    <a
-      class="cta"
-      href="https://wa.me/5491157979932?text=Hola%2C%20quiero%20consultar%20por%20las%20tortillas%20congeladas"
-      target="_blank"
-    >
-
-      ☎ PEDIR CONGELADAS
-
-    </a>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     INFORMACIÓN
-========================= -->
-
-<section
-  class="info"
-  id="ubicacion"
->
-
-  <div class="info-inner">
-
-
-    <div class="info-item">
-
-      <div class="info-icon">
-        📍
-      </div>
-
-      <div>
-
-        <h4>
-          Nos encontrás en
-        </h4>
-
-        <p>
-          San Ignacio y Av. Gaona
-          <br>
-          Ciudadela
-        </p>
-
-      </div>
-
-    </div>
-
-
-
-    <div
-      class="info-item"
-      id="horarios"
-    >
-
-      <div class="info-icon">
-        ◷
-      </div>
-
-      <div>
-
-        <h4>
-          Nuestros horarios
-        </h4>
-
-        <p>
-          Todos los días
-          <br>
-          6:00 a 19:00 hs
-        </p>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="info-item">
-
-      <div class="info-icon">
-        🛵
-      </div>
-
-      <div>
-
-        <h4>
-          Envíos a domicilio
-        </h4>
-
-        <p class="envio-gratis">
-
-          Hasta
-          <strong>
-            3 km GRATIS
-          </strong>
-
-          <br>
-
-          Más de 3 km:
-          costo según distancia
-
-        </p>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="info-item">
-
-      <div class="info-icon">
-        💬
-      </div>
-
-      <div>
-
-        <h4>
-          Pedí por WhatsApp
-        </h4>
-
-        <p>
-          Rápido, fácil
-          <br>
-          y sin vueltas
-        </p>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="info-item">
-
-      <div class="info-icon">
-        ★
-      </div>
-
-      <div>
-
-        <h4>
-          Calidad y buen sabor
-        </h4>
-
-        <p>
-          La clásica tortilla
-          <br>
-          como tiene que ser
-        </p>
-
-      </div>
-
-    </div>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     FOTO FINAL
-========================= -->
-
-<section
-  class="footer-visual"
-  id="contacto"
->
-
-  <img
-    src="footer_pampa.jpg"
-    alt="Las Tortillas del Gaucho"
-  >
-
-
-  <!--
-  Hace clickeable el botón
-  amarillo de la propia imagen
-  -->
+  </footer>
+
+  <!-- =========================
+       WHATSAPP FLOTANTE
+  ========================= -->
 
   <a
-    class="footer-hotspot"
-    href="https://wa.me/5491157979932?text=Hola%2C%20quiero%20hacer%20un%20pedido%20de%20tortillas"
+    class="whatsapp"
+    href="https://wa.me/5491157979932?text=Hola%2C%20quiero%20hacer%20un%20pedido"
     target="_blank"
-    aria-label="Hacé tu pedido"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
   >
+
+    <svg
+      viewBox="0 0 32 32"
+      aria-hidden="true"
+    >
+
+      <path
+        fill="white"
+        d="M16 3C8.82 3 3 8.56 3 15.42c0 2.43.74 4.69 2.02 6.6L3 29l7.29-1.91A13.4 13.4 0 0 0 16 28c7.18 0 13-5.56 13-12.58S23.18 3 16 3Zm0 22.72c-1.83 0-3.62-.49-5.17-1.42l-.37-.22-4.33 1.14 1.16-4.1-.24-.38a9.1 9.1 0 0 1-1.47-4.96c0-5.29 4.67-9.59 10.42-9.59s10.42 4.3 10.42 9.59S21.75 25.72 16 25.72Zm5.72-7.17c-.31-.15-1.85-.87-2.14-.97-.29-.1-.5-.15-.71.15-.21.31-.82.97-1.01 1.17-.18.2-.37.23-.68.08-.31-.15-1.32-.46-2.51-1.48-.93-.79-1.56-1.77-1.74-2.07-.18-.31-.02-.47.14-.62.14-.14.31-.36.47-.54.16-.18.21-.31.31-.51.11-.2.06-.38-.02-.54-.08-.15-.71-1.63-.97-2.23-.26-.59-.52-.51-.71-.52h-.61c-.21 0-.55.08-.84.38-.29.31-1.11 1.03-1.11 2.52 0 1.48 1.14 2.92 1.3 3.12.16.2 2.24 3.26 5.43 4.57.76.31 1.35.49 1.81.63.76.23 1.45.2 2 .12.61-.09 1.85-.72 2.11-1.42.26-.69.26-1.29.18-1.42-.08-.13-.29-.2-.6-.35Z"
+      />
+
+    </svg>
+
   </a>
-
-
-  <!--
-  Tapa el WhatsApp viejo
-  dibujado dentro de la foto.
-  -->
-
-  <div class="tapa-whatsapp"></div>
-
-
-</section>
-
-
-</main>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer class="bottom">
-
-  <div class="bottom-inner">
-
-    <span>
-
-      © 2026
-      Las Tortillas del Gaucho
-      | Ciudadela,
-      Buenos Aires
-
-    </span>
-
-
-    <span>
-
-      Seguinos en
-      &nbsp; ◎ &nbsp; ♪
-
-    </span>
-
-  </div>
-
-</footer>
-
-
-
-<!-- =========================
-     WHATSAPP FLOTANTE NUEVO
-========================= -->
-
-<a
-  class="whatsapp"
-  href="https://wa.me/5491157979932?text=Hola%2C%20quiero%20hacer%20un%20pedido"
-  target="_blank"
-  aria-label="Contactar por WhatsApp"
->
-
-  <span class="whatsapp-icon"></span>
-
-</a>
-
 
 </body>
 </html>

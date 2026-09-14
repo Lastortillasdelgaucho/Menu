@@ -3,728 +3,1681 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Las Tortillas del Gaucho. Tortillas caseras, bien argentinas. Pedidos por WhatsApp.">
+
+  <meta
+    name="description"
+    content="Las Tortillas del Gaucho. Tortillas caseras, bien argentinas. Pedidos por WhatsApp."
+  >
+
   <title>Las Tortillas del Gaucho</title>
 
   <style>
-    :root{
-      --negro:#070707;
-      --negro2:#11100d;
-      --dorado:#f3b632;
-      --dorado2:#e7a51f;
-      --crema:#f3dfb3;
-      --crema2:#ead2a0;
-      --blanco:#fff7e8;
-      --borde:#5a4a31;
+
+    :root {
+      --negro: #070707;
+      --dorado: #f3b632;
+      --crema: #f3dfb3;
+      --blanco: #fff7e8;
     }
 
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      background:var(--negro);
-      color:var(--blanco);
-      font-family:Arial,Helvetica,sans-serif;
-      overflow-x:hidden;
-    }
-    a{text-decoration:none;color:inherit}
-    img{display:block;max-width:100%}
-
-    /* HEADER */
-    .topbar{
-      width:100%;
-      background:#050505;
-      border-bottom:1px solid rgba(255,255,255,.08);
-      position:sticky;
-      top:0;
-      z-index:1000;
-    }
-    .topbar-inner{
-      max-width:1180px;
-      margin:auto;
-      min-height:82px;
-      padding:10px 24px;
-      display:flex;
-      align-items:center;
-      gap:34px;
-    }
-    .brand{
-      width:118px;
-      flex:0 0 auto;
-    }
-    .brand img{
-      width:100%;
-      border-radius:4px;
-    }
-    nav{
-      flex:1;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:34px;
-    }
-    nav a{
-      font-size:12px;
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:.7px;
-      transition:.2s;
-      white-space:nowrap;
-    }
-    nav a:hover, nav a.active{color:var(--dorado)}
-    .social{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      font-weight:900;
-      font-size:18px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    /* HERO */
-    .hero{
-      background:#0a0907;
-      position:relative;
-      overflow:hidden;
+    html {
+      scroll-behavior: smooth;
     }
-    .hero-inner{
-      max-width:1180px;
-      min-height:470px;
-      margin:auto;
-      display:grid;
-      grid-template-columns:42% 58%;
-      align-items:stretch;
+
+    body {
+      background: var(--negro);
+      color: var(--blanco);
+      font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden;
     }
-    .hero-copy{
-      padding:64px 25px 58px 42px;
-      z-index:2;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:flex-start;
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
-    .hero-kicker{
-      font-family:Georgia,serif;
-      font-style:italic;
-      font-size:31px;
-      line-height:1;
-      color:#fff4da;
-      transform:rotate(-2deg);
-      margin-bottom:4px;
+
+    img {
+      display: block;
+      max-width: 100%;
     }
-    .hero-title{
-      font-size:78px;
-      font-weight:950;
-      line-height:.84;
-      color:var(--dorado);
-      letter-spacing:-3px;
-      text-transform:uppercase;
-      margin:0;
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .topbar {
+      width: 100%;
+      background: #050505;
+
+      border-bottom:
+        1px solid rgba(255,255,255,.08);
+
+      position: sticky;
+      top: 0;
+
+      z-index: 1000;
     }
-    .hero-subline{
-      font-family:Georgia,serif;
-      font-style:italic;
-      font-size:34px;
-      color:#fff4da;
-      line-height:1;
-      margin:5px 0 22px;
-      transform:rotate(-2deg);
+
+    .topbar-inner {
+      max-width: 1180px;
+
+      margin: auto;
+
+      min-height: 82px;
+
+      padding: 10px 24px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 34px;
     }
-    .brush{
-      background:var(--dorado);
-      color:#090909;
-      padding:8px 20px 7px;
-      font-size:16px;
-      font-weight:950;
-      transform:skew(-8deg);
-      margin-bottom:18px;
-      box-shadow:0 4px 0 rgba(0,0,0,.25);
+
+    .brand {
+      width: 118px;
+
+      flex: 0 0 auto;
     }
-    .brush span{display:block;transform:skew(8deg)}
-    .cta{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      background:var(--dorado);
-      color:#080808;
-      padding:12px 24px;
-      border-radius:999px;
-      font-weight:950;
-      font-size:15px;
-      box-shadow:0 4px 0 rgba(0,0,0,.35);
-      transition:.2s;
+
+    .brand img {
+      width: 100%;
+
+      border-radius: 4px;
     }
-    .cta:hover{transform:translateY(-2px);background:#ffc84c}
-    .hero-photo{
-      position:relative;
-      min-height:470px;
+
+    nav {
+      flex: 1;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 34px;
+    }
+
+    nav a {
+      font-size: 12px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing: .7px;
+
+      white-space: nowrap;
+
+      transition: .2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--dorado);
+    }
+
+    .social {
+      display: flex;
+
+      align-items: center;
+
+      gap: 14px;
+
+      font-weight: 900;
+
+      font-size: 18px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      background: #0a0907;
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+
+      min-height: 470px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        42% 58%;
+
+      align-items: stretch;
+    }
+
+    .hero-copy {
+      padding:
+        64px 25px
+        58px 42px;
+
+      z-index: 2;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      align-items: flex-start;
+    }
+
+    .hero-kicker {
+      font-family: Georgia, serif;
+
+      font-style: italic;
+
+      font-size: 31px;
+
+      line-height: 1;
+
+      color: #fff4da;
+
+      transform: rotate(-2deg);
+
+      margin-bottom: 4px;
+    }
+
+    .hero-title {
+      font-size: 78px;
+
+      font-weight: 950;
+
+      line-height: .84;
+
+      color: var(--dorado);
+
+      letter-spacing: -3px;
+
+      text-transform: uppercase;
+    }
+
+    .hero-subline {
+      font-family: Georgia, serif;
+
+      font-style: italic;
+
+      font-size: 34px;
+
+      color: #fff4da;
+
+      line-height: 1;
+
+      margin: 5px 0 22px;
+
+      transform: rotate(-2deg);
+    }
+
+    .brush {
+      background: var(--dorado);
+
+      color: #090909;
+
+      padding: 8px 20px 7px;
+
+      font-size: 16px;
+
+      font-weight: 950;
+
+      transform: skew(-8deg);
+
+      margin-bottom: 18px;
+
+      box-shadow:
+        0 4px 0
+        rgba(0,0,0,.25);
+    }
+
+    .brush span {
+      display: block;
+
+      transform: skew(8deg);
+    }
+
+
+    /* =========================
+       BOTÓN
+    ========================= */
+
+    .cta {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      background: var(--dorado);
+
+      color: #080808;
+
+      padding: 12px 24px;
+
+      border-radius: 999px;
+
+      font-weight: 950;
+
+      font-size: 15px;
+
+      box-shadow:
+        0 4px 0
+        rgba(0,0,0,.35);
+
+      transition: .2s;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+
+      background: #ffc84c;
+    }
+
+
+    /* =========================
+       FOTO PRINCIPAL
+    ========================= */
+
+    .hero-photo {
+      position: relative;
+
+      min-height: 470px;
+
       background:
-        linear-gradient(90deg,#0a0907 0%,rgba(10,9,7,.35) 14%,rgba(10,9,7,0) 34%),
-        url("assets/hero_tortilla.jpg") center/cover no-repeat;
-    }
-    .hero-quote{
-      position:absolute;
-      right:28px;
-      bottom:44px;
-      width:160px;
-      text-align:center;
-      font-family:Georgia,serif;
-      font-style:italic;
-      font-size:22px;
-      line-height:1.1;
-      color:#fff1d2;
-      transform:rotate(-8deg);
-      text-shadow:0 2px 5px #000;
+        linear-gradient(
+          90deg,
+          #0a0907 0%,
+          rgba(10,9,7,.35) 14%,
+          rgba(10,9,7,0) 34%
+        ),
+        url("hero_tortilla.jpg")
+        center / cover
+        no-repeat;
     }
 
-    /* BORDE RASGADO */
-    .torn{
-      height:24px;
-      background:#050505;
-      clip-path:polygon(
-        0 40%,4% 64%,8% 42%,12% 68%,16% 46%,20% 61%,24% 41%,28% 63%,
-        32% 44%,36% 66%,40% 46%,44% 60%,48% 43%,52% 64%,56% 45%,60% 60%,
-        64% 41%,68% 65%,72% 44%,76% 61%,80% 43%,84% 66%,88% 45%,92% 62%,
-        96% 42%,100% 62%,100% 100%,0 100%
+    .hero-quote {
+      position: absolute;
+
+      right: 28px;
+
+      bottom: 44px;
+
+      width: 160px;
+
+      text-align: center;
+
+      font-family:
+        Georgia, serif;
+
+      font-style: italic;
+
+      font-size: 22px;
+
+      line-height: 1.1;
+
+      color: #fff1d2;
+
+      transform: rotate(-8deg);
+
+      text-shadow:
+        0 2px 5px #000;
+    }
+
+
+    /* =========================
+       BORDE RASGADO
+    ========================= */
+
+    .torn {
+      height: 24px;
+
+      background: #050505;
+
+      clip-path: polygon(
+        0 40%,
+        4% 64%,
+        8% 42%,
+        12% 68%,
+        16% 46%,
+        20% 61%,
+        24% 41%,
+        28% 63%,
+        32% 44%,
+        36% 66%,
+        40% 46%,
+        44% 60%,
+        48% 43%,
+        52% 64%,
+        56% 45%,
+        60% 60%,
+        64% 41%,
+        68% 65%,
+        72% 44%,
+        76% 61%,
+        80% 43%,
+        84% 66%,
+        88% 45%,
+        92% 62%,
+        96% 42%,
+        100% 62%,
+        100% 100%,
+        0 100%
       );
-      margin-top:-14px;
-      position:relative;
-      z-index:5;
+
+      margin-top: -14px;
+
+      position: relative;
+
+      z-index: 5;
     }
 
-    /* SABORES */
-    .sabores{
+
+    /* =========================
+       SABORES
+    ========================= */
+
+    .sabores {
       background:
-        radial-gradient(circle at 50% 0,rgba(166,106,30,.10),transparent 28%),
+        radial-gradient(
+          circle at 50% 0,
+          rgba(166,106,30,.10),
+          transparent 28%
+        ),
         #090909;
-      padding:32px 22px 42px;
-    }
-    .section-head{
-      text-align:center;
-      margin-bottom:20px;
-    }
-    .section-head h2{
-      display:inline-block;
-      color:var(--blanco);
-      font-size:39px;
-      font-weight:950;
-      letter-spacing:-1px;
-      text-transform:uppercase;
-      position:relative;
-    }
-    .section-head h2:before,
-    .section-head h2:after{
-      content:"✦";
-      color:var(--dorado);
-      font-size:28px;
-      margin:0 14px;
-      vertical-align:middle;
-    }
-    .section-head p{
-      color:#d9c89e;
-      text-transform:uppercase;
-      letter-spacing:4px;
-      font-size:11px;
-      margin-top:6px;
-    }
-    .section-head .rule{
-      width:500px;
-      max-width:75vw;
-      height:1px;
-      background:linear-gradient(90deg,transparent,#b98936,transparent);
-      margin:10px auto 0;
+
+      padding:
+        32px 22px
+        42px;
     }
 
-    .sabores-grid{
-      max-width:1180px;
-      margin:auto;
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:12px;
-    }
-    .sabor{
-      min-height:215px;
-      background:#14110d;
-      border:1px solid #6b5636;
-      border-radius:7px;
-      overflow:hidden;
-      box-shadow:0 7px 20px rgba(0,0,0,.35);
-    }
-    .sabor img{
-      width:100%;
-      height:135px;
-      object-fit:cover;
-    }
-    .sabor-text{
-      min-height:78px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      padding:9px 8px;
-      background:linear-gradient(#17130e,#0d0c0a);
-    }
-    .sabor h3{
-      font-size:21px;
-      line-height:1;
-      font-weight:950;
-      text-transform:uppercase;
-      color:#fff7e8;
-    }
-    .sabor p{
-      color:var(--dorado);
-      font-family:Georgia,serif;
-      font-style:italic;
-      font-size:15px;
-      margin-top:4px;
-    }
-    .frase{
-      border:none;
-      box-shadow:none;
-      background:transparent;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      min-height:215px;
-      font-family:Georgia,serif;
-      font-style:italic;
-      font-size:28px;
-      line-height:1.05;
-      text-align:center;
-      transform:rotate(-6deg);
-      color:#fff2d8;
-      padding:20px;
+    .section-head {
+      text-align: center;
+
+      margin-bottom: 20px;
     }
 
-    /* INFO BEIGE */
-    .info-strip{
-      background:var(--crema);
-      color:#111;
-      padding:30px 22px;
-      position:relative;
-    }
-    .info-strip:before,
-    .info-strip:after{
-      content:"";
-      position:absolute;
-      left:0;
-      width:100%;
-      height:14px;
-      background:var(--crema);
-      clip-path:polygon(0 42%,4% 67%,8% 40%,12% 65%,16% 45%,20% 62%,24% 39%,28% 66%,32% 45%,36% 63%,40% 40%,44% 65%,48% 43%,52% 62%,56% 41%,60% 66%,64% 44%,68% 63%,72% 40%,76% 65%,80% 43%,84% 62%,88% 41%,92% 66%,96% 43%,100% 62%,100% 100%,0 100%);
-    }
-    .info-strip:before{top:-9px}
-    .info-strip:after{bottom:-9px;transform:rotate(180deg)}
-    .info-inner{
-      max-width:1180px;
-      margin:auto;
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:26px;
-    }
-    .info-box{
-      display:grid;
-      grid-template-columns:50px 1fr;
-      gap:10px;
-      align-items:center;
-    }
-    .info-icon{
-      font-size:39px;
-      text-align:center;
-      filter:grayscale(1);
-    }
-    .info-box h4{
-      font-size:14px;
-      font-weight:950;
-      text-transform:uppercase;
-      margin-bottom:3px;
-    }
-    .info-box p{
-      font-size:12px;
-      line-height:1.25;
+    .section-head h2 {
+      display: inline-block;
+
+      color: var(--blanco);
+
+      font-size: 39px;
+
+      font-weight: 950;
+
+      letter-spacing: -1px;
+
+      text-transform: uppercase;
     }
 
-    /* FOOTER HERO */
-    .footer-hero{
-      min-height:270px;
+    .section-head h2::before,
+    .section-head h2::after {
+      content: "✦";
+
+      color: var(--dorado);
+
+      font-size: 28px;
+
+      margin: 0 14px;
+
+      vertical-align: middle;
+    }
+
+    .section-head p {
+      color: #d9c89e;
+
+      text-transform: uppercase;
+
+      letter-spacing: 4px;
+
+      font-size: 11px;
+
+      margin-top: 6px;
+    }
+
+    .rule {
+      width: 500px;
+
+      max-width: 75vw;
+
+      height: 1px;
+
       background:
-        linear-gradient(90deg,rgba(0,0,0,.18),rgba(0,0,0,.28)),
-        url("assets/footer_pampa.jpg") center/cover no-repeat;
-      display:flex;
-      align-items:center;
-      padding:32px 22px;
-    }
-    .footer-inner{
-      width:100%;
-      max-width:1180px;
-      margin:auto;
-      display:grid;
-      grid-template-columns:1fr 1.4fr 1fr;
-      align-items:center;
-      gap:25px;
-    }
-    .footer-script{
-      font-family:Georgia,serif;
-      font-style:italic;
-      font-size:28px;
-      line-height:1.05;
-      text-align:center;
-      transform:rotate(-8deg);
-    }
-    .footer-brand{text-align:center}
-    .footer-brand h3{
-      color:#f2be4a;
-      text-transform:uppercase;
-      font-size:28px;
-      line-height:.95;
-      font-weight:950;
-    }
-    .footer-brand p{
-      margin-top:14px;
-      font-size:11px;
-      letter-spacing:4px;
-      text-transform:uppercase;
-    }
-    .footer-action{text-align:center}
+        linear-gradient(
+          90deg,
+          transparent,
+          #b98936,
+          transparent
+        );
 
-    .bottom{
-      background:#050505;
-      padding:16px 24px;
-      border-top:1px solid rgba(255,255,255,.08);
-      color:#8f8f8f;
-      font-size:11px;
-    }
-    .bottom-inner{
-      max-width:1180px;
-      margin:auto;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:15px;
+      margin:
+        10px auto 0;
     }
 
-    /* WHATSAPP */
-    .whatsapp{
-      position:fixed;
-      right:20px;
-      bottom:20px;
-      width:58px;
-      height:58px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:#25d366;
-      color:#fff;
-      font-weight:950;
-      font-size:27px;
-      box-shadow:0 6px 18px rgba(0,0,0,.45);
-      z-index:1200;
+
+    /* =========================
+       GRID SABORES
+    ========================= */
+
+    .sabores-grid {
+      max-width: 1180px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 12px;
     }
 
-    /* RESPONSIVE */
-    @media(max-width:900px){
-      .topbar-inner{gap:16px;padding:8px 14px}
-      nav{gap:15px}
-      nav a{font-size:10px}
-      .social{display:none}
+    .sabor {
+      min-height: 215px;
 
-      .hero-inner{grid-template-columns:1fr 1.25fr}
-      .hero-title{font-size:58px}
-      .hero-kicker{font-size:24px}
-      .hero-subline{font-size:27px}
+      background: #14110d;
 
-      .sabores-grid{grid-template-columns:repeat(3,1fr)}
-      .frase{display:none}
-      .info-inner{grid-template-columns:repeat(2,1fr)}
+      border:
+        1px solid #6b5636;
+
+      border-radius: 7px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 7px 20px
+        rgba(0,0,0,.35);
     }
 
-    @media(max-width:650px){
-      .topbar{position:relative}
-      .topbar-inner{
-        min-height:auto;
-        flex-direction:column;
-        gap:8px;
-        padding:10px 10px 12px;
+    .sabor img {
+      width: 100%;
+
+      height: 135px;
+
+      object-fit: cover;
+    }
+
+    .sabor-text {
+      min-height: 78px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 9px 8px;
+
+      background:
+        linear-gradient(
+          #17130e,
+          #0d0c0a
+        );
+    }
+
+    .sabor h3 {
+      font-size: 21px;
+
+      line-height: 1;
+
+      font-weight: 950;
+
+      text-transform: uppercase;
+
+      color: #fff7e8;
+    }
+
+    .sabor p {
+      color: var(--dorado);
+
+      font-family:
+        Georgia, serif;
+
+      font-style: italic;
+
+      font-size: 15px;
+
+      margin-top: 4px;
+    }
+
+
+    /* =========================
+       FRASE
+    ========================= */
+
+    .frase {
+      border: none;
+
+      background: transparent;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      min-height: 215px;
+
+      font-family:
+        Georgia, serif;
+
+      font-style: italic;
+
+      font-size: 28px;
+
+      line-height: 1.05;
+
+      text-align: center;
+
+      transform: rotate(-6deg);
+
+      color: #fff2d8;
+
+      padding: 20px;
+    }
+
+
+    /* =========================
+       FRANJA BEIGE
+    ========================= */
+
+    .info-strip {
+      background: var(--crema);
+
+      color: #111;
+
+      padding:
+        30px 22px;
+
+      position: relative;
+    }
+
+    .info-inner {
+      max-width: 1180px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 26px;
+    }
+
+    .info-box {
+      display: grid;
+
+      grid-template-columns:
+        50px 1fr;
+
+      gap: 10px;
+
+      align-items: center;
+    }
+
+    .info-icon {
+      font-size: 39px;
+
+      text-align: center;
+
+      filter: grayscale(1);
+    }
+
+    .info-box h4 {
+      font-size: 14px;
+
+      font-weight: 950;
+
+      text-transform: uppercase;
+
+      margin-bottom: 3px;
+    }
+
+    .info-box p {
+      font-size: 12px;
+
+      line-height: 1.25;
+    }
+
+
+    /* =========================
+       PARTE FINAL
+    ========================= */
+
+    .footer-hero {
+      min-height: 270px;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.18),
+          rgba(0,0,0,.28)
+        ),
+        url("footer_pampa.jpg")
+        center / cover
+        no-repeat;
+
+      display: flex;
+
+      align-items: center;
+
+      padding:
+        32px 22px;
+    }
+
+    .footer-inner {
+      width: 100%;
+
+      max-width: 1180px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1.4fr 1fr;
+
+      align-items: center;
+
+      gap: 25px;
+    }
+
+    .footer-script {
+      font-family:
+        Georgia, serif;
+
+      font-style: italic;
+
+      font-size: 28px;
+
+      line-height: 1.05;
+
+      text-align: center;
+
+      transform: rotate(-8deg);
+    }
+
+    .footer-brand {
+      text-align: center;
+    }
+
+    .footer-brand h3 {
+      color: #f2be4a;
+
+      text-transform: uppercase;
+
+      font-size: 28px;
+
+      line-height: .95;
+
+      font-weight: 950;
+    }
+
+    .footer-brand p {
+      margin-top: 14px;
+
+      font-size: 11px;
+
+      letter-spacing: 4px;
+
+      text-transform: uppercase;
+    }
+
+    .footer-action {
+      text-align: center;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .bottom {
+      background: #050505;
+
+      padding: 16px 24px;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,.08);
+
+      color: #8f8f8f;
+
+      font-size: 11px;
+    }
+
+    .bottom-inner {
+      max-width: 1180px;
+
+      margin: auto;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content:
+        space-between;
+
+      gap: 15px;
+    }
+
+
+    /* =========================
+       WHATSAPP
+    ========================= */
+
+    .whatsapp {
+      position: fixed;
+
+      right: 20px;
+
+      bottom: 20px;
+
+      width: 58px;
+
+      height: 58px;
+
+      border-radius: 50%;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      background: #25d366;
+
+      color: #fff;
+
+      font-weight: 950;
+
+      font-size: 27px;
+
+      box-shadow:
+        0 6px 18px
+        rgba(0,0,0,.45);
+
+      z-index: 1200;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .topbar-inner {
+        gap: 16px;
+
+        padding:
+          8px 14px;
       }
-      .brand{width:100px}
-      nav{
-        width:100%;
-        overflow-x:auto;
-        justify-content:flex-start;
-        gap:18px;
-        padding:2px 4px 5px;
-        scrollbar-width:none;
-      }
-      nav::-webkit-scrollbar{display:none}
-      nav a{font-size:9px;flex:0 0 auto}
 
-      .hero-inner{
-        min-height:auto;
-        grid-template-columns:1fr;
+      nav {
+        gap: 15px;
       }
-      .hero-copy{
-        min-height:390px;
-        padding:46px 24px 34px;
-        align-items:center;
-        text-align:center;
+
+      nav a {
+        font-size: 10px;
+      }
+
+      .social {
+        display: none;
+      }
+
+      .hero-inner {
+        grid-template-columns:
+          1fr 1.25fr;
+      }
+
+      .hero-title {
+        font-size: 58px;
+      }
+
+      .hero-kicker {
+        font-size: 24px;
+      }
+
+      .hero-subline {
+        font-size: 27px;
+      }
+
+      .sabores-grid {
+        grid-template-columns:
+          repeat(3, 1fr);
+      }
+
+      .frase {
+        display: none;
+      }
+
+      .info-inner {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+    }
+
+
+    /* =========================
+       CELULAR
+    ========================= */
+
+    @media (max-width: 650px) {
+
+      .topbar {
+        position: relative;
+      }
+
+      .topbar-inner {
+        min-height: auto;
+
+        flex-direction: column;
+
+        gap: 8px;
+
+        padding:
+          10px 10px 12px;
+      }
+
+      .brand {
+        width: 100px;
+      }
+
+      nav {
+        width: 100%;
+
+        overflow-x: auto;
+
+        justify-content:
+          flex-start;
+
+        gap: 18px;
+
+        padding:
+          2px 4px 5px;
+
+        scrollbar-width: none;
+      }
+
+      nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      nav a {
+        font-size: 9px;
+
+        flex: 0 0 auto;
+      }
+
+
+      /* HERO CELULAR */
+
+      .hero-inner {
+        min-height: auto;
+
+        grid-template-columns:
+          1fr;
+      }
+
+      .hero-copy {
+        min-height: 430px;
+
+        padding:
+          46px 24px 34px;
+
+        align-items: center;
+
+        text-align: center;
+
         background:
-          linear-gradient(rgba(6,6,6,.72),rgba(6,6,6,.9)),
-          url("assets/hero_tortilla.jpg") center/cover no-repeat;
-      }
-      .hero-photo{display:none}
-      .hero-title{font-size:62px}
-      .hero-kicker{font-size:26px}
-      .hero-subline{font-size:28px}
-      .hero-quote{
-        position:static;
-        width:auto;
-        margin-top:24px;
-        font-size:18px;
+          linear-gradient(
+            rgba(6,6,6,.65),
+            rgba(6,6,6,.88)
+          ),
+          url("hero_tortilla.jpg")
+          center / cover
+          no-repeat;
       }
 
-      .sabores{padding:28px 12px 34px}
-      .section-head h2{font-size:28px}
-      .section-head h2:before,
-      .section-head h2:after{font-size:18px;margin:0 6px}
-      .section-head p{font-size:8px;letter-spacing:2.5px}
-      .sabores-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:9px;
+      .hero-photo {
+        display: none;
       }
-      .sabor{min-height:180px}
-      .sabor img{height:112px}
-      .sabor-text{min-height:66px;padding:7px 5px}
-      .sabor h3{font-size:16px}
-      .sabor p{font-size:12px}
 
-      .info-strip{padding:26px 15px}
-      .info-inner{grid-template-columns:1fr;gap:19px}
-      .info-box{grid-template-columns:46px 1fr}
-      .info-icon{font-size:31px}
+      .hero-title {
+        font-size: 62px;
+      }
 
-      .footer-hero{min-height:320px}
-      .footer-inner{
-        grid-template-columns:1fr;
-        gap:16px;
+      .hero-kicker {
+        font-size: 26px;
       }
-      .footer-script{font-size:24px}
-      .footer-brand h3{font-size:25px}
-      .bottom-inner{
-        flex-direction:column;
-        text-align:center;
+
+      .hero-subline {
+        font-size: 28px;
       }
+
+
+      /* SABORES CELULAR */
+
+      .sabores {
+        padding:
+          28px 12px
+          34px;
+      }
+
+      .section-head h2 {
+        font-size: 28px;
+      }
+
+      .section-head h2::before,
+      .section-head h2::after {
+        font-size: 18px;
+
+        margin:
+          0 6px;
+      }
+
+      .section-head p {
+        font-size: 8px;
+
+        letter-spacing:
+          2.5px;
+      }
+
+      .sabores-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+
+        gap: 9px;
+      }
+
+      .sabor {
+        min-height: 180px;
+      }
+
+      .sabor img {
+        height: 112px;
+      }
+
+      .sabor-text {
+        min-height: 66px;
+
+        padding:
+          7px 5px;
+      }
+
+      .sabor h3 {
+        font-size: 16px;
+      }
+
+      .sabor p {
+        font-size: 12px;
+      }
+
+      .frase {
+        display: flex;
+
+        min-height: 180px;
+
+        font-size: 22px;
+      }
+
+
+      /* INFO CELULAR */
+
+      .info-strip {
+        padding:
+          26px 15px;
+      }
+
+      .info-inner {
+        grid-template-columns:
+          1fr;
+
+        gap: 19px;
+      }
+
+      .info-box {
+        grid-template-columns:
+          46px 1fr;
+      }
+
+      .info-icon {
+        font-size: 31px;
+      }
+
+
+      /* FOOTER CELULAR */
+
+      .footer-hero {
+        min-height: 320px;
+      }
+
+      .footer-inner {
+        grid-template-columns:
+          1fr;
+
+        gap: 16px;
+      }
+
+      .footer-script {
+        font-size: 24px;
+      }
+
+      .footer-brand h3 {
+        font-size: 25px;
+      }
+
+      .bottom-inner {
+        flex-direction: column;
+
+        text-align: center;
+      }
+
     }
 
-    @media(max-width:380px){
-      .hero-title{font-size:50px}
-      .section-head h2{font-size:23px}
-      .sabor h3{font-size:14px}
-      .sabor p{font-size:11px}
+
+    /* CELULARES MUY CHICOS */
+
+    @media (max-width: 380px) {
+
+      .hero-title {
+        font-size: 50px;
+      }
+
+      .section-head h2 {
+        font-size: 23px;
+      }
+
+      .sabor h3 {
+        font-size: 14px;
+      }
+
+      .sabor p {
+        font-size: 11px;
+      }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
   <header class="topbar">
+
     <div class="topbar-inner">
-      <a class="brand" href="#inicio">
-        <img src="assets/logo.jpg" alt="Las Tortillas del Gaucho">
+
+      <a
+        class="brand"
+        href="#inicio"
+      >
+
+        <img
+          src="logo.jpg"
+          alt="Las Tortillas del Gaucho"
+        >
+
       </a>
 
-      <nav aria-label="Menú principal">
-        <a class="active" href="#inicio">Inicio</a>
-        <a href="#sabores">Nuestros sabores</a>
-        <a href="#ubicacion">Ubicación</a>
-        <a href="#horarios">Horarios</a>
-        <a href="#contacto">Contacto</a>
+
+      <nav
+        aria-label="Menú principal"
+      >
+
+        <a
+          class="active"
+          href="#inicio"
+        >
+          Inicio
+        </a>
+
+        <a href="#sabores">
+          Nuestros sabores
+        </a>
+
+        <a href="#ubicacion">
+          Ubicación
+        </a>
+
+        <a href="#horarios">
+          Horarios
+        </a>
+
+        <a href="#contacto">
+          Contacto
+        </a>
+
       </nav>
 
-      <div class="social" aria-label="Redes sociales">
+
+      <div class="social">
+
         <span>◎</span>
+
         <span>♪</span>
+
       </div>
+
     </div>
+
   </header>
+
 
   <main>
 
-    <section class="hero" id="inicio">
+
+    <!-- =========================
+         PORTADA
+    ========================== -->
+
+    <section
+      class="hero"
+      id="inicio"
+    >
+
       <div class="hero-inner">
 
-        <div class="hero-copy">
-          <div class="hero-kicker">Llevamos la clásica</div>
-          <h1 class="hero-title">TORTILLA</h1>
-          <div class="hero-subline">a otro nivel</div>
 
-          <div class="brush"><span>SABORES QUE ENAMORAN</span></div>
+        <div class="hero-copy">
+
+          <div class="hero-kicker">
+            Llevamos la clásica
+          </div>
+
+          <h1 class="hero-title">
+            TORTILLA
+          </h1>
+
+          <div class="hero-subline">
+            a otro nivel
+          </div>
+
+          <div class="brush">
+
+            <span>
+              SABORES QUE ENAMORAN
+            </span>
+
+          </div>
+
 
           <a
             class="cta"
             href="https://wa.me/5491157979932?text=Hola%2C%20quiero%20hacer%20un%20pedido%20de%20tortillas"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
+
             ☎ HACÉ TU PEDIDO &nbsp;›
+
           </a>
+
         </div>
+
 
         <div class="hero-photo">
-          <div class="hero-quote">Más que tortilla,<br>una tradición</div>
+
+          <div class="hero-quote">
+
+            Más que tortilla,
+            <br>
+            una tradición
+
+          </div>
+
         </div>
 
+
       </div>
+
     </section>
+
 
     <div class="torn"></div>
 
-    <section class="sabores" id="sabores">
+
+    <!-- =========================
+         SABORES
+    ========================== -->
+
+    <section
+      class="sabores"
+      id="sabores"
+    >
+
 
       <div class="section-head">
-        <h2>Nuestros Sabores</h2>
-        <p>Tortillas caseras, bien argentinas</p>
+
+        <h2>
+          Nuestros Sabores
+        </h2>
+
+        <p>
+          Tortillas caseras,
+          bien argentinas
+        </p>
+
         <div class="rule"></div>
+
       </div>
+
 
       <div class="sabores-grid">
 
-        <article class="sabor">
-          <img src="assets/roquefort.jpg" alt="Tortilla de roquefort y muzza">
-          <div class="sabor-text">
-            <h3>Roquefort</h3>
-            <p>y muzza</p>
-          </div>
-        </article>
+
+        <!-- ROQUEFORT -->
 
         <article class="sabor">
-          <img src="assets/provoleta.jpg" alt="Tortilla de provoleta con jamón y queso">
+
+          <img
+            src="roquefort.jpg"
+            alt="Tortilla de roquefort y muzza"
+          >
+
           <div class="sabor-text">
-            <h3>Provoleta</h3>
-            <p>con jamón y queso</p>
+
+            <h3>
+              Roquefort
+            </h3>
+
+            <p>
+              y muzza
+            </p>
+
           </div>
+
         </article>
 
-        <article class="sabor">
-          <img src="assets/caprese.jpg" alt="Tortilla caprese">
-          <div class="sabor-text">
-            <h3>Caprese 🌿</h3>
-          </div>
-        </article>
+
+        <!-- PROVOLETA -->
 
         <article class="sabor">
-          <img src="assets/fugazzeta.jpg" alt="Tortilla fugazzeta">
+
+          <img
+            src="provoleta.jpg"
+            alt="Tortilla de provoleta con jamón y queso"
+          >
+
           <div class="sabor-text">
-            <h3>Fugazzeta 🧅</h3>
+
+            <h3>
+              Provoleta
+            </h3>
+
+            <p>
+              con jamón y queso
+            </p>
+
           </div>
+
         </article>
 
-        <article class="sabor">
-          <img src="assets/jamon_queso.jpg" alt="Tortilla de jamón y queso">
-          <div class="sabor-text">
-            <h3>Jamón</h3>
-            <p>y queso</p>
-          </div>
-        </article>
+
+        <!-- CAPRESE -->
 
         <article class="sabor">
-          <img src="assets/jamon_muzza_morron.jpg" alt="Tortilla de jamón, muzza y morrón">
+
+          <img
+            src="caprese.jpg"
+            alt="Tortilla caprese"
+          >
+
           <div class="sabor-text">
-            <h3>Jamón, Muzza</h3>
-            <p>y morrón 🌶️</p>
+
+            <h3>
+              Caprese 🌿
+            </h3>
+
           </div>
+
         </article>
 
+
+        <!-- FUGAZZETA -->
+
         <article class="sabor">
-          <img src="assets/huevo.jpg" alt="Tortilla de huevo con jamón y mozzarella">
+
+          <img
+            src="fugazzeta.jpg"
+            alt="Tortilla fugazzeta"
+          >
+
           <div class="sabor-text">
-            <h3>Huevo 🥚</h3>
-            <p>con jamón y mozzarella</p>
+
+            <h3>
+              Fugazzeta 🧅
+            </h3>
+
           </div>
+
         </article>
+
+
+        <!-- JAMÓN Y QUESO -->
+
+        <article class="sabor">
+
+          <img
+            src="jamon_queso.jpg"
+            alt="Tortilla de jamón y queso"
+          >
+
+          <div class="sabor-text">
+
+            <h3>
+              Jamón
+            </h3>
+
+            <p>
+              y queso
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- JAMÓN MUZZA MORRÓN -->
+
+        <article class="sabor">
+
+          <img
+            src="jamon_muzza_morron.jpg"
+            alt="Tortilla de jamón, muzza y morrón"
+          >
+
+          <div class="sabor-text">
+
+            <h3>
+              Jamón, Muzza
+            </h3>
+
+            <p>
+              y morrón 🌶️
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- HUEVO -->
+
+        <article class="sabor">
+
+          <img
+            src="huevo.jpg"
+            alt="Tortilla de huevo con jamón y mozzarella"
+          >
+
+          <div class="sabor-text">
+
+            <h3>
+              Huevo 🥚
+            </h3>
+
+            <p>
+              con jamón y mozzarella
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- FRASE -->
 
         <div class="frase">
-          Tortillas<br>rellenas de<br>sabor
+
+          Tortillas
+          <br>
+          rellenas de
+          <br>
+          sabor
+
         </div>
 
+
       </div>
+
     </section>
 
-    <section class="info-strip" id="ubicacion">
+
+    <!-- =========================
+         INFORMACIÓN
+    ========================== -->
+
+    <section
+      class="info-strip"
+      id="ubicacion"
+    >
+
       <div class="info-inner">
 
-        <div class="info-box">
-          <div class="info-icon">📍</div>
-          <div>
-            <h4>Nos encontrás en</h4>
-            <p>San Ignacio y Av. Gaona<br>(Ciudadela)</p>
-          </div>
-        </div>
-
-        <div class="info-box" id="horarios">
-          <div class="info-icon">◷</div>
-          <div>
-            <h4>Nuestros horarios</h4>
-            <p>Lunes a Viernes<br>6hs a 10hs | 15hs a 20hs</p>
-          </div>
-        </div>
 
         <div class="info-box">
-          <div class="info-icon">🛵</div>
-          <div>
-            <h4>Pedí por WhatsApp</h4>
-            <p>Rápido, fácil<br>y sin vueltas</p>
+
+          <div class="info-icon">
+            📍
           </div>
+
+          <div>
+
+            <h4>
+              Nos encontrás en
+            </h4>
+
+            <p>
+              San Ignacio y Av. Gaona
+              <br>
+              (Ciudadela)
+            </p>
+
+          </div>
+
         </div>
 
-        <div class="info-box">
-          <div class="info-icon">★</div>
-          <div>
-            <h4>Calidad y buen sabor</h4>
-            <p>La clásica tortilla<br>como tiene que ser</p>
+
+        <div
+          class="info-box"
+          id="horarios"
+        >
+
+          <div class="info-icon">
+            ◷
           </div>
+
+          <div>
+
+            <h4>
+              Nuestros horarios
+            </h4>
+
+            <p>
+              Lunes a Viernes
+              <br>
+              6hs a 10hs | 15hs a 20hs
+            </p>
+
+          </div>
+
         </div>
+
+
+        <div class="info-box">
+
+          <div class="info-icon">
+            🛵
+          </div>
+
+          <div>
+
+            <h4>
+              Pedí por WhatsApp
+            </h4>
+
+            <p>
+              Rápido, fácil
+              <br>
+              y sin vueltas
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <div class="info-icon">
+            ★
+          </div>
+
+          <div>
+
+            <h4>
+              Calidad y buen sabor
+            </h4>
+
+            <p>
+              La clásica tortilla
+              <br>
+              como tiene que ser
+            </p>
+
+          </div>
+
+        </div>
+
 
       </div>
+
     </section>
 
-    <section class="footer-hero" id="contacto">
+
+    <!-- =========================
+         PARTE FINAL
+    ========================== -->
+
+    <section
+      class="footer-hero"
+      id="contacto"
+    >
+
       <div class="footer-inner">
 
+
         <div class="footer-script">
-          Un sabor<br>bien nuestro
+
+          Un sabor
+          <br>
+          bien nuestro
+
         </div>
+
 
         <div class="footer-brand">
-          <h3>Las Tortillas<br>del Gaucho</h3>
-          <p>Tradición en cada bocado</p>
+
+          <h3>
+            Las Tortillas
+            <br>
+            del Gaucho
+          </h3>
+
+          <p>
+            Tradición en cada bocado
+          </p>
+
         </div>
 
+
         <div class="footer-action">
+
           <a
             class="cta"
             href="https://wa.me/5491157979932?text=Hola%2C%20quiero%20hacer%20un%20pedido%20de%20tortillas"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
+
             ☎ HACÉ TU PEDIDO
+
           </a>
+
         </div>
 
+
       </div>
+
     </section>
+
 
   </main>
 
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
   <footer class="bottom">
+
     <div class="bottom-inner">
-      <span>© 2026 Las Tortillas del Gaucho | Ciudadela, Buenos Aires</span>
-      <span>Seguinos en &nbsp; ◎ &nbsp; ♪</span>
+
+      <span>
+        © 2026 Las Tortillas del Gaucho |
+        Ciudadela, Buenos Aires
+      </span>
+
+      <span>
+        Seguinos en &nbsp; ◎ &nbsp; ♪
+      </span>
+
     </div>
+
   </footer>
+
+
+  <!-- =========================
+       WHATSAPP FLOTANTE
+  ========================== -->
 
   <a
     class="whatsapp"
     href="https://wa.me/5491157979932"
     target="_blank"
     rel="noopener noreferrer"
-    aria-label="Contactar por WhatsApp">☎</a>
+    aria-label="Contactar por WhatsApp"
+  >
+
+    ☎
+
+  </a>
+
 
 </body>
 </html>
